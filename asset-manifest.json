@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Said-Mustafa-Said/static/css/main.31a312cd.css",
+    "main.js": "/Said-Mustafa-Said/static/js/main.c67a5dd1.js",
+    "static/js/453.1407b060.chunk.js": "/Said-Mustafa-Said/static/js/453.1407b060.chunk.js",
+    "index.html": "/Said-Mustafa-Said/index.html",
+    "main.31a312cd.css.map": "/Said-Mustafa-Said/static/css/main.31a312cd.css.map",
+    "main.c67a5dd1.js.map": "/Said-Mustafa-Said/static/js/main.c67a5dd1.js.map",
+    "453.1407b060.chunk.js.map": "/Said-Mustafa-Said/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31a312cd.css",
+    "static/js/main.c67a5dd1.js"
+  ]
+}
