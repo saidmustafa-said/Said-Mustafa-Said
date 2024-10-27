@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Said-Mustafa-Said/static/css/main.23a6f8b8.css",
+    "main.css": "/Said-Mustafa-Said/static/css/main.b72ee718.css",
     "main.js": "/Said-Mustafa-Said/static/js/main.0a5278f8.js",
     "static/js/453.1407b060.chunk.js": "/Said-Mustafa-Said/static/js/453.1407b060.chunk.js",
     "index.html": "/Said-Mustafa-Said/index.html",
-    "main.23a6f8b8.css.map": "/Said-Mustafa-Said/static/css/main.23a6f8b8.css.map",
+    "main.b72ee718.css.map": "/Said-Mustafa-Said/static/css/main.b72ee718.css.map",
     "main.0a5278f8.js.map": "/Said-Mustafa-Said/static/js/main.0a5278f8.js.map",
     "453.1407b060.chunk.js.map": "/Said-Mustafa-Said/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23a6f8b8.css",
+    "static/css/main.b72ee718.css",
     "static/js/main.0a5278f8.js"
   ]
 }
