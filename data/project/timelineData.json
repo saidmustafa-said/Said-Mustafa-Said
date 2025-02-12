@@ -1,6 +1,19 @@
 {
 	"timeline": [
 		{
+			"id": 18,
+			"title": "Step Functions Workflow Implementation",
+			"description": "A project to automate and manage decision-making processes using AWS Step Functions. It ensures data validation, error handling, and efficient task execution.",
+			"year": 2024,
+			"month": 9,
+			"topics": [
+				"Workflow Automation",
+				"AWS Step Functions",
+				"Data Validation",
+				"Error Handling"
+			]
+		},
+		{
 			"id": 17,
 			"title": "AWS Infrastructure Setup with Terraform",
 			"description": "Automated AWS infrastructure provisioning using Terraform, incorporating services like EKS, RDS, MongoDB, and Vault for a cloud-based application setup.",
@@ -21,7 +34,7 @@
 			"title": "Migration and Scalability",
 			"description": "The project involved improving scalability by separating an EC2 instance running an application and two databases (Milvus and Supabase), and implementing auto-scaling for the application.",
 			"year": 2023,
-			"month": 9,
+			"month": 8,
 			"topics": [
 				"AWS EC2",
 				"Docker",
