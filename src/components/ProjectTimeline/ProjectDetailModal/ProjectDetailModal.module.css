@@ -1,0 +1,64 @@
+/* src/components/ProjectTimeline/ProjectDetailModal/ProjectDetailModal.module.css */
+.project-modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-color);
+    z-index: 1000;
+    padding: var(--spacing-medium);
+    overflow-y: auto;
+    color: var(--text-color);
+}
+
+.modal-content {
+    max-width: 800px;
+    margin: var(--spacing-medium) auto;
+    background: var(--primary-color);
+    padding: var(--spacing-medium);
+    border-radius: 1rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: var(--spacing-medium);
+    /* Space between columns */
+}
+
+.modal-content h2 {
+    grid-column: span 2;
+    /* Make the title span across both columns */
+    font-size: 2rem;
+    margin-bottom: var(--spacing-small);
+}
+
+.modal-content p {
+    margin-bottom: var(--spacing-medium);
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-small);
+}
+
+.modal-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.modal-content ul li {
+    margin-bottom: var(--spacing-small);
+}
+
+.close-modal {
+    position: absolute;
+    top: var(--spacing-small);
+    right: var(--spacing-small);
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}

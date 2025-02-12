@@ -1,0 +1,62 @@
+/**
+ * src/index.css
+ *
+ * @format
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&family=Great+Vibes&family=Cinzel:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* scroll-behavior: smooth; */
+}
+
+:root {
+	/* --background-color: #0B0C10; */
+	--primary-color: #0b0c10;
+	--secondary-color: #1f2833;
+	--tertiary-color: #1f2833e6;
+	--accent-color: #66fcf1;
+	--text-color: #c5c6c7;
+	--hover-color: #45a29e;
+
+	--role-font-size: 2.5rem;
+	--engineer-title-font-size: 5rem;
+	--role-arrow-size: 2rem;
+
+	--font-size-base: 16px;
+	--font-size-text: 18px;
+	--font-size-subtitle: 20px;
+	--font-size-title: 22px;
+	--font-size-megatitle: 24px;
+
+	--spacing-small: 1rem;
+	--spacing-medium: 2rem;
+	--transition: 0.3s ease-in-out;
+
+	--screen-Size: 1200px;
+}
+
+html,
+body {
+	margin: 0;
+	font-family: 'Playfair Display', serif;
+	background-color: var(--primary-color);
+	/* color: var(--text-color); */
+	/* line-height: 1.6; */
+	/* overflow-x: hidden; */
+	z-index: 0;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.app-container {
+	margin-top: 0;
+	width: 100%;
+	max-width: 100%;
+}

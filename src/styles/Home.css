@@ -1,0 +1,4 @@
+.home-page {
+    max-width: var(--screen-Size);
+    margin: 0 auto;
+}

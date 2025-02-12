@@ -1,0 +1,88 @@
+/**
+ * Outer container for the Summary section
+ *
+ * @format
+ */
+
+.section {
+	border-radius: 10px;
+	text-align: center;
+	padding: 1.5rem;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+/* Title for "About Me" */
+.sectionTitle {
+	font-size: var(--font-size-megatitle);
+	color: var(--accent-color);
+	margin-bottom: 1rem;
+	text-align: center;
+	border-bottom: 2px solid var(--accent-color);
+	padding-bottom: 0.4rem;
+}
+/* Container for the paragraph */
+.contentContainer {
+	border-radius: 8px;
+	padding: 1rem;
+	max-width: 900px;
+	margin: 0 auto;
+	background: var(--tertiary-color);
+	margin-bottom: 1rem;
+	border: 1px solid rgba(102, 252, 241, 0.2);
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
+.position {
+	font-size: var(--font-size-subtitle);
+	font-weight: bold;
+	color: var(--accent-color);
+}
+
+.date {
+	font-size: var(--font-size-subtitle);
+	color: var(--text-color);
+	white-space: nowrap;
+}
+
+.company {
+	font-size: var(--font-size-title);
+	font-style: italic;
+	color: var(--accent-color);
+	margin-bottom: 0.5rem;
+}
+
+.tasks {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tasks li {
+	margin-bottom: 0.4rem;
+	padding-left: 0;
+	/* Removed padding for dot alignment */
+	font-size: 0.9rem;
+	color: var(--text-color);
+	font-size: var(--font-size-text);
+}
+
+/* Removed the ::before pseudo-element */
+
+@media (max-width: 600px) {
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.date {
+		margin-top: 0.2rem;
+	}
+}

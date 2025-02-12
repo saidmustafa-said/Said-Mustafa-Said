@@ -1,0 +1,24 @@
+{
+	"services": [
+		{
+			"id": "1",
+			"title": "Artificial Intelligence & Machine Learning",
+			"description": "Building and optimizing AI and machine learning models, including deep learning algorithms for complex problems, model deployment, and optimization for scalable applications."
+		},
+		{
+			"id": "2",
+			"title": "Large Language Models & Natural Language Processing Solutions",
+			"description": "Designing and deploying large language models (LLMs) for AI applications like chatbots, retrieval-augmented generation (RAG) systems, and natural language processing (NLP) solutions."
+		},
+		{
+			"id": "3",
+			"title": "DevOps & Cloud Infrastructure Solutions",
+			"description": "Implementing cloud solutions, managing cloud infrastructure (AWS, GCP, Azure), automating workflows, and integrating AI models into robust CI/CD pipelines."
+		},
+		{
+			"id": "4",
+			"title": "Programming & Software Development Solutions",
+			"description": "Developing backend systems, writing scripts for automation, and building software solutions using languages such as Python, Java, and others for diverse business applications."
+		}
+	]
+}

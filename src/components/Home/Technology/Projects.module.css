@@ -1,0 +1,93 @@
+/* src/components/home/Projects/Projects.module.css */
+.projects {
+    display: block;
+    padding: var(--spacing-medium);
+    max-width: var(--screen-Size);
+    margin: 0 auto;
+    margin-top: 4rem;
+    color: var(--text-color);
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+}
+
+.projects-title h3 {
+    font-size: var(--font-size-megatitle);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-medium);
+    position: relative;
+}
+
+.projects-title h3::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, var(--accent-color), var(--hover-color));
+    margin: var(--spacing-small) auto 0;
+    border-radius: 2px;
+}
+
+.projects-title h3 span {
+    display: block;
+    margin-top: var(--spacing-small);
+    font-size: var(--font-size-text);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-medium);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: transform var(--transition);
+    width: 80%;
+    max-width: 800px;
+    margin: var(--spacing-small) auto;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-medium);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.562) 90%);
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.project-overlay h3 {
+    margin: 0;
+    font-size: var(--font-size-subtitle);
+
+}

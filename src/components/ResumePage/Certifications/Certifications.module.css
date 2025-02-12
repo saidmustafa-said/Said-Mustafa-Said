@@ -1,0 +1,105 @@
+/**
+ * General section Styling
+ *
+ * @format
+ */
+
+.section {
+	padding: 2rem;
+	margin: 0 auto;
+	max-width: 1000px;
+	color: var(--text-color);
+}
+
+.sectionTitle {
+	font-size: var(--font-size-megatitle);
+	color: var(--accent-color);
+	margin-bottom: 1rem;
+	text-align: center;
+	border-bottom: 2px solid var(--accent-color);
+	padding-bottom: 0.4rem;
+}
+/* Grid Layout */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 1fr;
+	/* Ensures equal height for all rows */
+	gap: 1rem;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Individual Card Styling */
+.card {
+	background: var(--tertiary-color);
+	border-radius: 12px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border: 1px solid rgba(102, 252, 241, 0.2);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Certificate Icon Styling */
+.icon {
+	width: 70%;
+	height: auto;
+	border-radius: 8px;
+	object-fit: cover;
+	margin-bottom: 1rem;
+}
+
+/* Content Styling */
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.certTitle {
+	font-size: var(--font-size-title);
+	/* font-weight: bold; */
+	color: var(--accent-color);
+	margin-bottom: 0.5rem;
+}
+
+.issuer {
+	font-size: var(--font-size-subtitle);
+	font-style: italic;
+	color: var(--text-color);
+	margin-bottom: 0.5rem;
+}
+
+.year {
+	font-size: var(--font-size-subtitle);
+	color: var(--text-color);
+	margin-bottom: 0.5rem;
+}
+
+.details {
+	font-size: var(--font-size-text);
+	line-height: 1.4;
+	color: var(--text-color);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 750px) {
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	.icon {
+		width: 80%;
+	}
+
+	.certTitle {
+		font-size: 1rem;
+	}
+
+	.details {
+		font-size: 0.8rem;
+	}
+}

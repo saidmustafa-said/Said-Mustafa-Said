@@ -1,0 +1,72 @@
+/* src/components/home/Projects/ProjectModal.module.css */
+
+/* Project Modal Container */
+.project-modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-color);
+    z-index: 1000;
+    padding: var(--spacing-medium);
+    overflow-y: auto;
+    color: var(--text-color);
+}
+
+/* Modal Content */
+.modal-content {
+    max-width: 800px;
+    margin: var(--spacing-medium) auto;
+    background: var(--primary-color);
+    padding: var(--spacing-medium);
+    border-radius: 1rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: var(--spacing-medium);
+    /* Space between columns */
+}
+
+/* Modal Title */
+.modal-content h2 {
+    grid-column: span 2;
+    /* Span across both columns */
+    font-size: var(--font-size-megatitle);
+    margin-bottom: var(--spacing-small);
+}
+
+/* Modal Paragraphs */
+.modal-content p {
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Modal Subheadings */
+.modal-content h3 {
+    font-size: var(--font-size-megatitle);
+    margin-bottom: var(--spacing-small);
+}
+
+/* Modal List */
+.modal-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.modal-content ul li {
+    margin-bottom: var(--spacing-small);
+}
+
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: var(--spacing-small);
+    right: var(--spacing-small);
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: var(--font-size-title);
+    cursor: pointer;
+}

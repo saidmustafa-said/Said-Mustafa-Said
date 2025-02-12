@@ -1,0 +1,101 @@
+/**
+ * Outer container for the Summary section
+ *
+ * @format
+ */
+
+.section {
+	border-radius: 10px;
+	padding: 1.5rem;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+/* Title for "About Me" */
+.sectionTitle {
+	font-size: var(--font-size-megatitle);
+	color: var(--accent-color);
+	margin-bottom: 1rem;
+	text-align: center;
+	border-bottom: 2px solid var(--accent-color);
+	padding-bottom: 0.4rem;
+}
+
+/* Container for the paragraph */
+.contentContainer {
+	border-radius: 8px;
+	padding: 1rem;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.contentContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.categoryBox {
+	flex: 1 1 calc(45% - 1rem);
+	padding: 0.8rem;
+	border-radius: 0.4rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoryBox:hover {
+	transform: translateY(-2px);
+}
+
+.categoryTitle {
+	font-size: var(--font-size-title);
+	font-weight: bold;
+	color: var(--accent-color);
+	margin-bottom: var(--spacing-small);
+	text-align: center;
+}
+
+.tagsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.2rem;
+	justify-content: center;
+	transition: transform 0.3s ease;
+
+	/* Transition for scaling */
+}
+
+.tagsContainer:hover {
+	transform: scale(1.05);
+	/* Enlarge container slightly on hover */
+}
+
+.tag {
+	padding: 0.2rem 0.6rem;
+	border-radius: 0.6rem;
+	color: var(--text-color);
+	background: var(--tertiary-color);
+	border: 1px solid rgba(102, 252, 241, 0.2);
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	font-size: var(--font-size-text);
+	white-space: nowrap;
+	text-align: center;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tag:hover {
+	background: var(--hover-color);
+	color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+	.categoriesContainer {
+		flex-direction: column;
+		gap: 0.8rem;
+	}
+
+	.categoryBox {
+		flex: 1 1 100%;
+	}
+}

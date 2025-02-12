@@ -1,0 +1,129 @@
+.filter-container {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* Stack filter sections vertically */
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow filter items to wrap when space is tight */
+    gap: 1rem;
+    align-items: center;
+}
+
+.filter-section-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.filter-group {
+    display: flex;
+    /* Flexbox: items in a row */
+    flex-wrap: wrap;
+    /* Allow wrapping to next row when space is insufficient */
+    gap: 0.5rem;
+    /* Space between filter tags */
+    align-items: center;
+    /* Align items vertically */
+}
+
+.filter-tag {
+    background: rgba(102, 252, 241, 0.1);
+    border: 1.5px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Hover and active states for the filter tags */
+.filter-tag:hover,
+.filter-tag.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* New styles for the 'Show More' button and popup */
+.more-skills-toggle {
+    background: rgba(102, 252, 241, 0.1);
+    border: 1.5px solid var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+/* Popup container for skills */
+.popup-container {
+    position: relative;
+    /* Position the popup relative to the container */
+}
+
+/* The actual popup for skills */
+.skills-popup {
+    position: absolute;
+    top: 100%;
+    /* Position below the 'Show More' button */
+    left: 0;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(62, 56, 56, 0.766);
+    max-height: 400px;
+    /* Maximum height for the popup */
+    max-width: 700px;
+    /* Increased max-width to fit more skills */
+    /* Adjusted max-width to accommodate more skills in a row */
+    overflow-y: auto;
+    /* Allow scroll if content exceeds max height */
+    padding: 1rem;
+    z-index: 10;
+    /* Ensure it appears above other content */
+    width: auto;
+    /* Adjust width based on content */
+    display: flex;
+    /* Arrange items side by side */
+    flex-wrap: wrap;
+    /* Allow items to wrap if they overflow */
+    gap: 0.5rem;
+    /* Space between individual filter tags */
+}
+
+/* Adjust filter tags within the popup to allow more to fit in a row */
+.filter-tag {
+    background: rgba(102, 252, 241, 0.1);
+    border: 1.5px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    /* Prevents the tags from breaking into new lines */
+    flex: 0 1 auto;
+    /* Allow the tags to shrink and grow based on space */
+}
+
+/* Hover and active states for the filter tags */
+.filter-tag:hover,
+.filter-tag.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+}

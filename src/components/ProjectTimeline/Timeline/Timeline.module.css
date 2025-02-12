@@ -1,0 +1,56 @@
+/* src/components/ProjectTimeline/Timeline/Timeline.module.css */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.timeline {
+    padding: 2rem;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+    margin-top: 1rem;
+}
+
+.dateInfo {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.date {
+    background: rgba(102, 252, 241, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.skills {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: rgba(102, 252, 241, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.noProjects {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-top: 3rem;
+    font-style: italic;
+}

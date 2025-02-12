@@ -1,0 +1,61 @@
+{
+	"projects": [
+		{
+			"title": "AI & Machine Learning Model Development",
+			"description": "End-to-end development and optimization of AI and machine learning models for scalable, real-world applications, utilizing deep learning and advanced ML techniques.",
+			"technologies": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras"],
+			"features": [
+				"Custom model development",
+				"Hyperparameter tuning",
+				"Deep learning optimization",
+				"Scalable model deployment"
+			],
+			"image": "/photos/home/ai_ml.webp",
+			"alt": "AI and machine learning model development"
+		},
+		{
+			"title": "Large Language Models & NLP Solutions",
+			"description": "Development of advanced NLP solutions, including chatbots and RAG systems, using large language models (LLMs) for intelligent, natural language processing.",
+			"technologies": [
+				"Hugging Face Transformers",
+				"OpenAI GPT",
+				"BERT",
+				"spaCy"
+			],
+			"features": [
+				"LLM fine-tuning",
+				"Chatbot development",
+				"Retrieval-Augmented Generation (RAG)",
+				"NLP applications for business automation"
+			],
+			"image": "/photos/home/llms_nlp_3.webp",
+			"alt": "Large language models and NLP solutions"
+		},
+		{
+			"title": "DevOps & Cloud Infrastructure Solutions",
+			"description": "Designing and implementing cloud-native infrastructure solutions to support AI/ML workflows, including automated deployment pipelines and infrastructure automation.",
+			"technologies": ["AWS", "Docker", "Kubernetes", "Terraform"],
+			"features": [
+				"Cloud infrastructure design",
+				"CI/CD pipeline integration",
+				"Automation with Terraform",
+				"Scalable cloud environments"
+			],
+			"image": "/photos/home/devops_2.webp",
+			"alt": "DevOps and cloud infrastructure solutions"
+		},
+		{
+			"title": "Backend Programming & Software Development",
+			"description": "Developing backend systems and creating scalable software solutions with efficient backend programming and scripting to support AI applications and automation.",
+			"technologies": ["Python", "Java", "Node.js", "Flask"],
+			"features": [
+				"Backend system development",
+				"API design and implementation",
+				"Automation scripting",
+				"Software architecture design"
+			],
+			"image": "/photos/home/programming.webp",
+			"alt": "Backend programming and software development"
+		}
+	]
+}

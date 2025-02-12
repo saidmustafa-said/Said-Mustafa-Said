@@ -1,0 +1,230 @@
+/**
+ * Navbar
+ *
+ * @format
+ */
+
+.navbar {
+	max-width: var(--screen-size);
+	margin: 0 auto;
+	height: 80px;
+	background-attachment: fixed;
+	padding: var(--spacing-small) var(--spacing-medium);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+	border: none;
+	position: relative;
+	box-shadow: none;
+}
+
+.navbar + * {
+	margin-top: 0;
+}
+
+/* Company Name */
+.navbar .company-name {
+	color: var(--accent-color);
+	font-size: var(--font-size-title);
+	font-weight: bold;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+	display: flex;
+	gap: var(--spacing-small);
+	list-style: none;
+}
+
+.navbar .nav-links a {
+	text-decoration: none;
+	position: relative;
+	color: var(--text-color);
+	font-size: var(--font-size-base);
+	transition: color var(--transition);
+}
+
+.navbar .nav-links a:hover {
+	color: var(--hover-color);
+}
+
+.navbar .nav-links a:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--accent-color);
+	transform: scaleX(0);
+	transition: transform var(--transition);
+}
+
+.navbar .nav-links a:hover:after {
+	transform: scaleX(1);
+}
+
+/* Social Links */
+.navbar .social-links {
+	display: flex;
+	gap: calc(var(--spacing-small) * 1.5);
+}
+
+.navbar .social-links a {
+	position: relative;
+	color: var(--text-color);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: calc(var(--spacing-small) / 2);
+	transition: color var(--transition);
+}
+
+.navbar .social-links a:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--accent-color);
+	transform: scaleX(0);
+	transition: transform var(--transition);
+}
+
+.navbar .social-links a:hover:after {
+	transform: scaleX(1);
+}
+
+.navbar .social-links a:hover {
+	color: var(--accent-color);
+}
+
+.navbar .social-links svg {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
+/* Menu Button */
+.navbar .menu-button {
+	background: none;
+	border: none;
+	color: var(--text-color);
+	cursor: pointer;
+	display: none;
+	padding: var(--spacing-small);
+	position: relative;
+	z-index: 1001;
+}
+
+.navbar .menu-icon {
+	width: 30px;
+	height: 30px;
+	fill: currentColor;
+	color: var(--accent-color);
+}
+
+/* Dropdown Menu */
+.navbar .dropdown-menu {
+	background-color: var(--tertiary-color);
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.5rem;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: 0 8px 24px var(--secondary-color);
+	width: 220px;
+	z-index: 1000;
+	transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+	opacity: 0;
+	transform: translateY(-10px);
+}
+
+.navbar .dropdown-menu.open {
+	display: flex;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.navbar .dropdown-menu .nav-links,
+.navbar .dropdown-menu .social-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.navbar .dropdown-menu .nav-links a,
+.navbar .dropdown-menu .social-links a {
+	color: var(--accent-color);
+	text-decoration: none;
+	font-size: var(--font-size-base);
+	font-weight: 500;
+	position: relative;
+	transition: color 0.3s, transform 0.3s;
+	padding: 0.75rem 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.navbar .dropdown-menu .nav-links a:hover,
+.navbar .dropdown-menu .social-links a:hover {
+	color: var(--hover-color);
+	transform: translateX(5px);
+}
+
+.navbar .dropdown-menu .social-links a {
+	gap: 0.5rem;
+}
+
+.navbar .dropdown-menu .social-links svg {
+	width: 24px;
+	height: 24px;
+	fill: currentColor;
+	transition: transform 0.3s;
+}
+
+.navbar .dropdown-menu .social-links a:hover svg {
+	transform: scale(1.1);
+}
+
+/* Divider */
+.navbar .dropdown-menu .divider {
+	height: 1px;
+	background-color: var(--text-color);
+	width: 100%;
+	margin: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+	.navbar .nav-links,
+	.navbar .social-links {
+		display: none;
+	}
+
+	.navbar .menu-button {
+		display: block;
+		z-index: 1001;
+	}
+
+	.navbar .dropdown-menu .nav-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.navbar .dropdown-menu .social-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}
