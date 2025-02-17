@@ -1,4 +1,3 @@
-/** @format */
 
 // src/components/ProjectTimeline/ProjectGrid/ProjectGridComponent.js
 

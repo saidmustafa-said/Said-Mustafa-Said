@@ -1,4 +1,4 @@
-/** @format */
+// src/components/ProjectTimeline/Timeline/TimelineComponent.js
 
 import React, { useEffect, useState } from 'react';
 import FilterPanel from '../FilterPanel/FilterPanelComponent';
