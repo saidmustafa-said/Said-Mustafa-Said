@@ -1,7 +1,12 @@
-/** @format */
+/**
+ * src/components/home/Technology/ProjectModalComponent.js
+ *
+ * @format
+ */
 
 import React from 'react';
 import styles from './ProjectModal.module.css';
+import { FaLaptopCode, FaRegListAlt } from 'react-icons/fa';
 
 const ProjectModal = ({ project, onClose }) => {
 	return (
@@ -12,21 +17,37 @@ const ProjectModal = ({ project, onClose }) => {
 					onClick={onClose}>
 					&times;
 				</button>
-				<div id={styles.modalContent}>
-					<h2>{project.title}</h2>
-					<p>{project.description}</p>
-					<h3>Technologies</h3>
-					<ul>
-						{project.technologies.map((tech, index) => (
-							<li key={index}>{tech}</li>
-						))}
-					</ul>
-					<h3>Features</h3>
-					<ul>
-						{project.features.map((feature, index) => (
-							<li key={index}>{feature}</li>
-						))}
-					</ul>
+				<div className={styles.modalInnerContent}>
+					<header className={styles.modalHeader}>
+						<h2>{project.title}</h2>
+						<p className={styles.modalDescription}>{project.description}</p>
+					</header>
+					<div className={styles.modalBody}>
+						<div className={styles.modalSection}>
+							<h3>
+								<FaLaptopCode className={styles.modalIcon} /> Technologies
+							</h3>
+							<div className={styles['list-card']}>
+								<ul>
+									{project.technologies.map((tech, index) => (
+										<li key={index}>{tech}</li>
+									))}
+								</ul>
+							</div>
+						</div>
+						<div className={styles.modalSection}>
+							<h3>
+								<FaRegListAlt className={styles.modalIcon} /> Features
+							</h3>
+							<div className={styles['list-card']}>
+								<ul>
+									{project.features.map((feature, index) => (
+										<li key={index}>{feature}</li>
+									))}
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

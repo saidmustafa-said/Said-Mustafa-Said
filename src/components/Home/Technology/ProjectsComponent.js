@@ -1,5 +1,5 @@
 /** @format */
-
+// src/components/Home/Technology/ProjectsComponent.js
 import React, { useEffect, useState } from 'react';
 import ProjectModal from './ProjectModalComponent';
 import styles from './Projects.module.css';

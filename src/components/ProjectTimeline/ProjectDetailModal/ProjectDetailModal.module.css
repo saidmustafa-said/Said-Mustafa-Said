@@ -1,6 +1,10 @@
 /* src/components/ProjectTimeline/ProjectDetailModal/ProjectDetailModal.module.css */
+
+/* Modal Overlay & Container */
 .project-modal {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,45 +17,52 @@
     color: var(--text-color);
 }
 
+/* Modal Content Card */
 .modal-content {
+    width: 100%;
     max-width: 800px;
-    margin: var(--spacing-medium) auto;
     background: var(--primary-color);
     padding: var(--spacing-medium);
     border-radius: 1rem;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-medium);
-    /* Space between columns */
 }
 
-.modal-content h2 {
-    grid-column: span 2;
-    /* Make the title span across both columns */
+/* Modal Header */
+.modal-header {
+    text-align: center;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: var(--spacing-small);
+}
+
+.modal-header h2 {
     font-size: 2rem;
-    margin-bottom: var(--spacing-small);
+    margin: 0;
 }
 
-.modal-content p {
+/* Markdown Content Area */
+.markdown-content {
+    font-size: var(--font-size-text);
+    line-height: 1.6;
+}
+
+/* Optional Markdown Element Styling */
+.markdown-content h3 {
+    font-size: 1.5rem;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: var(--spacing-small);
+}
+
+.markdown-content p {
     margin-bottom: var(--spacing-medium);
 }
 
-.modal-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-small);
-}
-
-.modal-content ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.modal-content ul li {
-    margin-bottom: var(--spacing-small);
-}
-
+/* Close Button */
 .close-modal {
     position: absolute;
     top: var(--spacing-small);

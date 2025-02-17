@@ -1,23 +1,23 @@
-/** @format */
+/**
+ * src/components/ProjectTimeline/ProjectDetailModal/ProjectDetailModal.js
+ *
+ * @format
+ */
 
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styles from './ProjectDetailModal.module.css';
 
 const ProjectDetailModal = ({ project, onClose }) => {
-	// State to hold the markdown content
 	const [markdownContent, setMarkdownContent] = useState('');
 
 	// Fetch the Markdown content when the modal opens
 	useEffect(() => {
-		// Reset content initially
 		setMarkdownContent('');
 
-		// If a project exists, fetch its Markdown file
 		if (project) {
 			const fetchMarkdown = async () => {
 				try {
-					// Fetch the Markdown file based on numeric project ID
 					const response = await fetch(
 						`${process.env.PUBLIC_URL}/data/project/markdown/${project.id}.md`
 					);
@@ -30,7 +30,6 @@ const ProjectDetailModal = ({ project, onClose }) => {
 					setMarkdownContent(data);
 				} catch (error) {
 					console.error('Error fetching Markdown content:', error);
-					// Fallback error message
 					setMarkdownContent('# Error\nFailed to load project details.');
 				}
 			};
@@ -39,7 +38,6 @@ const ProjectDetailModal = ({ project, onClose }) => {
 		}
 	}, [project]);
 
-	// If no project is selected, render nothing
 	if (!project) return null;
 
 	return (
@@ -56,10 +54,12 @@ const ProjectDetailModal = ({ project, onClose }) => {
 					×
 				</button>
 
-				{/* Project Title */}
-				<h2>{project.title}</h2>
+				{/* Modal Header */}
+				<div className={styles['modal-header']}>
+					<h2>{project.title}</h2>
+				</div>
 
-				{/* Render Markdown Content */}
+				{/* Markdown Content */}
 				<div className={styles['markdown-content']}>
 					<ReactMarkdown>{markdownContent}</ReactMarkdown>
 				</div>

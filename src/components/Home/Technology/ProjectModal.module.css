@@ -1,4 +1,4 @@
-/* src/components/home/Projects/ProjectModal.module.css */
+/* src/components/home/Technology/ProjectModal.module.css */
 
 /* Project Modal Container */
 .project-modal {
@@ -23,39 +23,75 @@
     padding: var(--spacing-medium);
     border-radius: 1rem;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Inner Content */
+.modalInnerContent {
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-medium);
-    /* Space between columns */
 }
 
-/* Modal Title */
-.modal-content h2 {
-    grid-column: span 2;
-    /* Span across both columns */
-    font-size: var(--font-size-megatitle);
-    margin-bottom: var(--spacing-small);
-}
-
-/* Modal Paragraphs */
-.modal-content p {
+/* Modal Header */
+.modalHeader {
+    text-align: center;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: var(--spacing-small);
     margin-bottom: var(--spacing-medium);
 }
 
-/* Modal Subheadings */
-.modal-content h3 {
+.modalHeader h2 {
     font-size: var(--font-size-megatitle);
+    margin: 0;
+}
+
+.modalDescription {
+    font-size: var(--font-size-text);
+    margin-top: var(--spacing-small);
+    color: var(--text-color);
+}
+
+/* Modal Body */
+.modalBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-medium);
+}
+
+/* Modal Section */
+.modalSection h3 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-title);
     margin-bottom: var(--spacing-small);
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: var(--spacing-small);
 }
 
-/* Modal List */
-.modal-content ul {
-    list-style-type: none;
+.modalIcon {
+    margin-right: 0.5rem;
+    font-size: var(--font-size-title);
+    color: var(--accent-color);
+}
+
+/* List Card Styling */
+.list-card {
+    border: 1px solid var(--accent-color);
+    border-radius: 0.5rem;
+    padding: var(--spacing-small);
+    background: transparent;
+    /* Hollow look */
+}
+
+/* List styling (remove dotted borders) */
+.modalSection ul {
+    list-style: none;
     padding-left: 0;
+    margin: 0;
 }
 
-.modal-content ul li {
+.modalSection ul li {
     margin-bottom: var(--spacing-small);
 }
 

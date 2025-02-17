@@ -106,37 +106,60 @@ Social Accounts
 LinkedIn: https://www.linkedin.com/in/said-mustafa-said/
 GitHub: https://github.com/saidmustafa-said
 
-you will use these and then i will share my project with you and you will clean it and give me back a more structured and clean version of it in md and a json that will look like this :
+you will use these and then i will share my project with you and you will clean it and give me back a more structured and clean version of it in the provided json structure provided below:
 
-template for md:{Overview:
-A brief summary of the project, its objectives, and technologies used.
+for project_type → Defines whether it's:
+"individual" → You did it alone
+"team" → You worked on it with others
+"small_task" → A minor task, not a full project
+if not mentions then ask me.
 
-Steps Involved:
-[Step Title]:
-
-Key actions or tasks performed during this step.
-Any specific configurations, tools, or services used.
-[Step Title]:
-
-Additional steps or tasks, detailing what was accomplished.
-Key technologies involved.
-[Step Title]:
-
-Continue detailing the steps involved in the project.
-(Repeat the steps as necessary based on the complexity of the project.)
-
-Skills Required:
-[Skill Type]: Description of the skill used in the project.
-[Skill Type]: Another skill or tool used for the project.
-[Skill Type]: Continue listing all relevant skills used during the project.}
-
+for all the fields if not mentions in the md file, then ask me and ill answer it:
+{
+  "project_name": "",
+  "description": "",
+  "date": "",
+  "role": "",
+  "project_type": "", 
+  "technologies_used": [
     {
-      "id":[Unique ID, ](int),
-      "title": "[Project Title]",
-      "description": "[Brief description of the project]",
-      "year": YYYY,
-      "month": MMMM(int),
-      "topics": ["[Topic1]", "[Topic2]", "[Topic3]"]
+      "name": "",
+      "description": ""
     }
+  ],
+  "infrastructure": [
+    {
+      "name": "",
+      "description": "",
+      "steps": []
+    }
+  ],
+  "skills_required": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "challenges_faced": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "outcomes": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "links": [
+    {
+      "name": "",
+      "url": ""
+    }
+  ]
+}
+
+
 
 are you ready ?
