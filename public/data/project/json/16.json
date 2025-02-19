@@ -9,8 +9,29 @@
 	"technologies_used": [
 		{
 			"name": "AWS EC2",
-			"description": "Cloud service used to host and scale the application and databases.",
-			"infrastructure": "EC2 instances were configured to host and scale the application and databases.",
+			"description": "Cloud service used to host and scale the application and databases."
+		},
+		{
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
+		},
+		{
+			"name": "AWS ALB",
+			"description": "Application Load Balancer used to route traffic to different EC2 instances based on path and service type."
+		},
+		{
+			"name": "Docker & Docker Compose",
+			"description": "Used for containerizing the application and databases, allowing easy deployment across instances."
+		},
+		{
+			"name": "Auto-Scaling",
+			"description": "Feature that automatically adjusts the number of EC2 instances for the application based on traffic."
+		}
+	],
+	"infrastructure": [
+		{
+			"name": "EC2 Instances",
+			"description": "Used to host both the application and databases in separate instances.",
 			"steps": [
 				"Launch EC2 instances for application and database hosting.",
 				"Configure security groups and network settings for instances.",
@@ -18,9 +39,8 @@
 			]
 		},
 		{
-			"name": "VPC & Subnets",
-			"description": "Network configuration tools to ensure secure communication between EC2 instances.",
-			"infrastructure": "Private subnets were used for enhanced security.",
+			"name": "Private Subnets",
+			"description": "Created private subnets to improve security by isolating EC2 instances.",
 			"steps": [
 				"Create a Virtual Private Cloud (VPC) with public and private subnets.",
 				"Set up routing and security controls for private subnets.",
@@ -28,19 +48,16 @@
 			]
 		},
 		{
-			"name": "AWS ALB",
-			"description": "Application Load Balancer used to route traffic to different EC2 instances based on path and service type.",
-			"infrastructure": "ALB was deployed to route incoming traffic efficiently.",
+			"name": "Application Load Balancer",
+			"description": "Used to distribute incoming traffic between different services based on routing configurations.",
 			"steps": [
 				"Set up ALB with target groups for application and database services.",
-				"Configure path-based routing for directing traffic to specific instances.",
-				"Monitor ALB metrics to ensure optimal traffic distribution."
+				"Configure path-based routing for specific traffic routing."
 			]
 		},
 		{
 			"name": "Docker & Docker Compose",
 			"description": "Used for containerizing the application and databases, allowing easy deployment across instances.",
-			"infrastructure": "Docker containers were deployed across EC2 instances.",
 			"steps": [
 				"Create Docker images for the application and databases.",
 				"Write Docker Compose configuration for multi-container management.",
@@ -50,29 +67,10 @@
 		{
 			"name": "Auto-Scaling",
 			"description": "Feature that automatically adjusts the number of EC2 instances for the application based on traffic.",
-			"infrastructure": "Auto-scaling was set up to dynamically adjust EC2 instance count based on load.",
 			"steps": [
 				"Define auto-scaling policies based on traffic demand.",
 				"Set up CloudWatch alarms for monitoring performance.",
 				"Configure scaling actions to automatically add or remove instances."
-			]
-		}
-	],
-	"infrastructure": [
-		{
-			"name": "EC2 Instances",
-			"description": "Used to host both the application and databases in separate instances."
-		},
-		{
-			"name": "Private Subnets",
-			"description": "Created private subnets to improve security by isolating EC2 instances."
-		},
-		{
-			"name": "Application Load Balancer",
-			"description": "Used to distribute incoming traffic between different services based on routing configurations.",
-			"steps": [
-				"Set up ALB with target groups for application and database services.",
-				"Configure path-based routing for specific traffic routing."
 			]
 		}
 	],
@@ -82,7 +80,7 @@
 			"description": "Experience with launching, configuring, and managing EC2 instances for application and database hosting."
 		},
 		{
-			"name": "VPC & Subnets",
+			"name": "AWS VPC",
 			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{

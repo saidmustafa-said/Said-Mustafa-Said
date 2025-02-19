@@ -12,6 +12,10 @@
 			"description": "Implemented custom call flow logic, IVR, and speech-to-text integration."
 		},
 		{
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
+		},
+		{
 			"name": "AWS Lambda",
 			"description": "Developed API integrations, data processing, and concurrency control functions."
 		},

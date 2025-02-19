@@ -12,6 +12,10 @@
 			"description": "Managed and migrated Apache Cassandra databases between EC2 and AWS EKS environments."
 		},
 		{
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
+		},
+		{
 			"name": "Apache Spark",
 			"description": "Used Apache Spark for efficient large-scale data migration between Apache Cassandra clusters."
 		},

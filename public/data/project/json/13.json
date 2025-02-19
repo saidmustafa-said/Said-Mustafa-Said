@@ -114,6 +114,7 @@
 			"description": "Understanding of supervised learning techniques, particularly with regards to data labeling and structured learning."
 		}
 	],
+	"challenges_faced": [],
 	"outcomes": [
 		{
 			"name": "Improved AI Model Performance",
@@ -123,5 +124,6 @@
 			"name": "Custom Prompt Effectiveness",
 			"description": "Custom prompts helped achieve more accurate and contextually relevant outputs."
 		}
-	]
+	],
+	"links": []
 }

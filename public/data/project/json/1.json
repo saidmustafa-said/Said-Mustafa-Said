@@ -16,8 +16,8 @@
 			"description": "Compute service for hosting application servers."
 		},
 		{
-			"name": "AWS VPC",
-			"description": "Virtual network for secure communication between resources."
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
 			"name": "AWS ALB",

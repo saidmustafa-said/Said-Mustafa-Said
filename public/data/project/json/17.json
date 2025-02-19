@@ -12,15 +12,15 @@
 			"description": "Used to automate infrastructure provisioning and manage AWS services."
 		},
 		{
-			"name": "Amazon VPC",
-			"description": "Used for network isolation and secure communication between AWS resources."
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
-			"name": "Amazon Route 53",
+			"name": "AWS Route 53",
 			"description": "Managed DNS service to route traffic to resources."
 		},
 		{
-			"name": "Elastic Load Balancer (ALB)",
+			"name": "AWS Elastic Load Balancer (ALB)",
 			"description": "Used to distribute traffic across multiple EC2 instances and services."
 		},
 		{
@@ -32,7 +32,7 @@
 			"description": "Managed relational database service for SQL databases."
 		},
 		{
-			"name": "MongoDB",
+			"name": "AWS MongoDB",
 			"description": "Used as a NoSQL database for scalable storage."
 		},
 		{
@@ -54,7 +54,7 @@
 	],
 	"infrastructure": [
 		{
-			"name": "VPC Setup",
+			"name": "AWS VPC Setup",
 			"description": "Secure network isolation for AWS resources.",
 			"steps": [
 				"Create VPC: Set up a virtual private cloud for network isolation.",
@@ -95,7 +95,7 @@
 			]
 		},
 		{
-			"name": "MongoDB Setup",
+			"name": "AWS MongoDB Setup",
 			"description": "NoSQL database setup with MongoDB.",
 			"steps": [
 				"Deploy MongoDB: Set up MongoDB clusters for scalable storage.",

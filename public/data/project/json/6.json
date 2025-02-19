@@ -24,8 +24,8 @@
 			"description": "Relational database service for data storage and querying."
 		},
 		{
-			"name": "AWS VPC",
-			"description": "Virtual private cloud for secure networking and resource isolation."
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
 			"name": "Application Load Balancer (ALB)",

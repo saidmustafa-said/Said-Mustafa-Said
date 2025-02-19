@@ -12,6 +12,10 @@
 			"description": "Used for automating the setup of AWS infrastructure, including ECS services, Auto Scaling, Virtual Private Cloud (VPC), and Application Load Balancers (ALB)."
 		},
 		{
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
+		},
+		{
 			"name": "AWS ECS",
 			"description": "Managed containerized applications across multiple ECS clusters."
 		},

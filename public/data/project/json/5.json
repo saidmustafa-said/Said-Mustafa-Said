@@ -12,6 +12,10 @@
 			"description": "Used for automating the setup and management of AWS resources."
 		},
 		{
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
+		},
+		{
 			"name": "AWS Lambda",
 			"description": "Serverless computing service for scalable request handling and image processing."
 		},

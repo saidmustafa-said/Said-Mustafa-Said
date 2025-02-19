@@ -8,9 +8,7 @@
             "month": 9,
             "technologies_used": [
                 "AWS Step Functions",
-                "AWS Lambda",
-                "Error Handling",
-                "Data Validation"
+                "AWS Lambda"
             ]
         },
         {
@@ -21,13 +19,15 @@
             "month": 9,
             "technologies_used": [
                 "Terraform",
-                "AWS Services",
-                "Kubernetes",
-                "Helm Charts",
+                "AWS VPC & Subnets",
+                "AWS Route 53",
+                "AWS Elastic Load Balancer (ALB)",
+                "Amazon EKS",
+                "Amazon RDS",
+                "AWS MongoDB",
+                "Amazon Elasticache",
                 "Vault HCP",
                 "Service Mesh",
-                "Networking",
-                "Database Management",
                 "Cloud Security"
             ]
         },
@@ -39,7 +39,7 @@
             "month": 8,
             "technologies_used": [
                 "AWS EC2",
-                "VPC & Subnets",
+                "AWS VPC & Subnets",
                 "AWS ALB",
                 "Docker & Docker Compose",
                 "Auto-Scaling"
@@ -47,31 +47,29 @@
         },
         {
             "id": 15,
-            "project_name": "OCR Read Using LLM for Readability and Understanding",
+            "project_name": "OCR Read Using Large Language Models (LLM) for Readability and Understanding",
             "description": "The project utilized large language models (LLMs) for Optical Character Recognition (OCR) to extract and structure menu data from images. The task also involved addressing Turkish special character encoding issues and ensuring data was output in a structured JSON format.",
             "year": 2024,
             "month": 8,
             "technologies_used": [
-                "Amazon Bedrock",
+                "AWS Bedrock",
                 "Claude 3 Haiku",
                 "Python",
-                "JSON",
-                "Base64"
+                "Data Processing",
+                "Encryption"
             ]
         },
         {
             "id": 14,
             "project_name": "Deploying and Integrating Kubeflow on AWS EKS",
-            "description": "The goal of this project was to deploy Kubeflow on Amazon EKS, manage machine learning pipelines, and integrate MLflow for enhanced model tracking and experimentation.",
+            "description": "The goal of this project was to deploy Kubeflow on AWS EKS, manage machine learning pipelines, and integrate MLflow for enhanced model tracking and experimentation.",
             "year": 2024,
             "month": 7,
             "technologies_used": [
                 "Kubeflow",
+                "AWS VPC & Subnets",
                 "AWS EKS",
-                "MLflow",
-                "Kubernetes",
-                "Cloud Infrastructure",
-                "CI/CD"
+                "MLflow"
             ]
         },
         {
@@ -91,67 +89,68 @@
         },
         {
             "id": 12,
-            "project_name": "Migration from Cassandra on EC2 to Cassandra on EKS",
-            "description": "Successfully migrated data between two Cassandra clusters, moving from EC2-hosted environment to EKS-hosted Cassandra. Focused on data consistency, minimal downtime, and schema replication.",
+            "project_name": "Migration from Apache Cassandra on EC2 to Apache Cassandra on AWS EKS",
+            "description": "Successfully migrated data between two Apache Cassandra clusters, moving from an EC2-hosted environment to AWS EKS-hosted Cassandra. Focused on data consistency, minimal downtime, and schema replication.",
             "year": 2024,
             "month": 5,
             "technologies_used": [
                 "Apache Cassandra",
+                "AWS VPC & Subnets",
                 "Apache Spark",
-                "EKS"
+                "AWS EKS"
             ]
         },
         {
             "id": 11,
             "project_name": "AWS Services Architecture Implementation Using Terraform",
-            "description": "Implemented scalable AWS infrastructure using ECS, EC2, ASG with GPU instances, and ALBs for secure and efficient traffic management. Automated deployment with Terraform.",
+            "description": "Implemented scalable AWS infrastructure using AWS Elastic Container Service (ECS), AWS Elastic Compute Cloud (EC2), Auto Scaling Groups (ASG) with GPU instances, and Application Load Balancers (ALB) for secure and efficient traffic management. Automated deployment with Terraform.",
             "year": 2024,
             "month": 4,
             "technologies_used": [
                 "Terraform",
+                "AWS VPC & Subnets",
                 "AWS ECS",
                 "AWS EC2",
-                "AWS ALB"
+                "AWS Application Load Balancer (ALB)"
             ]
         },
         {
             "id": 10,
             "project_name": "Chat Interface with Large Language Models (LLM) for CLI Command Execution",
-            "description": "An interactive chat interface built with Streamlit that integrates multiple LLMs to process user queries and execute corresponding CLI commands, with a control mechanism for accuracy and a Retrieval-Augmented Generation (RAG) system for improved performance.",
+            "description": "An interactive chat interface built with Streamlit that integrates multiple Large Language Models (LLMs) to process user queries and execute corresponding CLI commands, with a control mechanism for accuracy and a Retrieval-Augmented Generation (RAG) system for improved performance.",
             "year": 2024,
             "month": 3,
             "technologies_used": [
                 "Streamlit",
-                "Llama3",
-                "Anthropic Models",
-                "AWS Models",
+                "Llama 3",
+                "AWS Bedrock",
                 "Claude Models",
-                "Cohere",
                 "Retrieval-Augmented Generation (RAG)"
             ]
         },
         {
             "id": 9,
-            "project_name": "Amazon Connect Call Center Integration and AWS Infrastructure",
-            "description": "Designed and implemented a scalable, secure call center system using Amazon Connect, integrating various AWS services like Lambda, DynamoDB, S3, Kinesis Data Firehose, EventBridge, SQS, and QuickSight to enhance customer service and provide real-time data processing and analytics.",
+            "project_name": "AWS Connect Call Center Integration and AWS Infrastructure",
+            "description": "Designed and implemented a scalable, secure call center system using AWS Connect, integrating various AWS services like AWS Lambda, AWS DynamoDB, AWS S3, AWS Kinesis Data Firehose, AWS EventBridge, AWS Simple Queue Service (SQS), and AWS QuickSight to enhance customer service and provide real-time data processing and analytics.",
             "year": 2024,
             "month": 2,
             "technologies_used": [
-                "Amazon Connect",
+                "AWS Connect",
+                "AWS VPC & Subnets",
                 "AWS Lambda",
-                "Amazon DynamoDB",
-                "Amazon S3",
-                "Amazon Kinesis Data Firehose",
-                "Amazon QuickSight",
-                "Amazon EventBridge",
-                "Amazon SQS",
-                "Amazon RDS"
+                "AWS DynamoDB",
+                "AWS S3",
+                "AWS Kinesis Data Firehose",
+                "AWS QuickSight",
+                "AWS EventBridge",
+                "AWS SQS",
+                "AWS RDS"
             ]
         },
         {
             "id": 8,
             "project_name": "Terraform and CI/CD for AWS Services with Multi-Environment Setup",
-            "description": "Set up AWS infrastructure using Terraform and implemented a CI/CD pipeline to manage deployments across production and staging environments. The project involved the configuration of various AWS services including CodePipeline, RDS, VPC, ECS, Redis, ALB, Bastion EC2, SES, Route 53, and SSL certificates.",
+            "description": "Set up AWS infrastructure using Terraform and implemented a CI/CD pipeline to manage deployments across production and staging environments. The project involved the configuration of various AWS services including AWS CodePipeline, AWS RDS, AWS VPC, AWS ECS, Redis, AWS Application Load Balancer (ALB), Bastion EC2, AWS SES, AWS Route 53, and SSL certificates.",
             "year": 2024,
             "month": 1,
             "technologies_used": [
@@ -159,27 +158,28 @@
                 "AWS Services",
                 "CI/CD Pipeline",
                 "Multi-Environment Setup",
-                "ECS",
-                "RDS",
-                "Redis",
-                "SSL Certificates",
-                "Route 53"
+                "AWS ECS",
+                "AWS RDS",
+                "AWS Redis",
+                "AWS SSL Certificates",
+                "AWS Route 53"
             ]
         },
         {
             "id": 7,
-            "project_name": "Terraform and CI/CD for AWS Services",
-            "description": "This project involved setting up an AWS infrastructure using Terraform and implementing a CI/CD pipeline for automated deployments. The infrastructure included AWS services such as CodePipeline, RDS, VPC, EKS, S3, VPN, and Bastion EC2, with secure connectivity between EKS and RDS.",
+            "project_name": "AWS Infrastructure and CI/CD with Terraform",
+            "description": "This project involved setting up an AWS infrastructure using Terraform and implementing a Continuous Integration/Continuous Deployment (CI/CD) pipeline for automated deployments. The infrastructure included AWS services such as AWS CodePipeline, AWS RDS, AWS VPC, AWS EKS, AWS S3, VPN, and Bastion EC2, with secure connectivity between AWS EKS and AWS RDS.",
             "year": 2023,
             "month": 12,
             "technologies_used": [
                 "Terraform",
-                "CI/CD",
-                "AWS Services",
-                "EKS",
-                "RDS",
-                "VPC",
-                "Automation"
+                "CI/CD Pipeline",
+                "AWS CodePipeline",
+                "AWS EKS",
+                "AWS RDS",
+                "AWS VPC",
+                "AWS S3",
+                "VPN and Bastion EC2"
             ]
         },
         {
@@ -190,12 +190,12 @@
             "month": 11,
             "technologies_used": [
                 "AWS ECS",
-                "Amazon EC2",
-                "Amazon OpenSearch",
-                "Amazon RDS",
-                "Amazon VPC",
+                "AWS EC2",
+                "AWS OpenSearch",
+                "AWS RDS",
+                "AWS VPC & Subnets",
                 "Application Load Balancer (ALB)",
-                "Amazon S3",
+                "AWS S3",
                 "AWS CodePipeline",
                 "CloudWatch"
             ]
@@ -208,11 +208,12 @@
             "month": 11,
             "technologies_used": [
                 "Terraform",
+                "AWS VPC & Subnets",
                 "AWS Lambda",
                 "Stable Diffusion",
                 "AWS EC2",
-                "DynamoDB",
-                "Amazon S3",
+                "AWS DynamoDB",
+                "AWS S3",
                 "AWS Systems Manager (SSM)",
                 "Boto3"
             ]
@@ -225,48 +226,50 @@
             "month": 10,
             "technologies_used": [
                 "Terraform",
+                "AWS VPC & Subnets",
                 "AWS Redshift",
                 "AWS Glue"
             ]
         },
         {
             "id": 3,
-            "project_name": "Terraform for AWS and SageMaker Model Deployment",
-            "description": "Automated AWS infrastructure provisioning using Terraform, including Elastic Beanstalk, API Gateway, Lambda, and SageMaker for machine learning model deployment and real-time inference.",
+            "project_name": "AWS Machine Learning Deployment with Terraform",
+            "description": "Automated deployment of ML infrastructure using Terraform, including Elastic Beanstalk, API Gateway, Lambda, and SageMaker for model training and real-time inference.",
             "year": 2023,
             "month": 10,
             "technologies_used": [
                 "Terraform",
-                "AWS",
-                "SageMaker",
-                "Django",
-                "Serverless Architectures"
+                "AWS SageMaker",
+                "AWS API Gateway",
+                "AWS Lambda"
             ]
         },
         {
             "id": 2,
-            "project_name": "Terraform for AWS",
-            "description": "Automated the provisioning of a complex AWS infrastructure using Terraform. Included services like VPC, CloudFront, EC2, ALB, ElastiCache, Amazon MQ, and S3 to ensure high availability, scalability, and secure traffic management.",
+            "project_name": "Advanced AWS Infrastructure with Terraform",
+            "description": "Automated complex AWS infrastructure with Terraform, including VPC, CloudFront, EC2, ALB, ElastiCache, AWS MQ, and S3 for high availability and security.",
             "year": 2023,
             "month": 9,
             "technologies_used": [
                 "Terraform",
-                "AWS",
-                "CloudFront",
-                "ElastiCache",
-                "Amazon MQ",
-                "S3"
+                "AWS CloudFront",
+                "AWS ElastiCache",
+                "AWS AWS MQ",
+                "AWS S3"
             ]
         },
         {
             "id": 1,
             "project_name": "Terraform for AWS",
-            "description": "Automating the deployment of AWS infrastructure using Terraform, including VPC, MongoDB setup, EC2 instance configuration, and ALB setup.",
+            "description": "Automated deployment of AWS infrastructure using Terraform, including VPC, MongoDB setup, EC2 instances, and ALB configuration.",
             "year": 2023,
             "month": 9,
             "technologies_used": [
                 "Terraform",
-                "AWS"
+                "AWS EC2",
+                "AWS VPC & Subnets",
+                "AWS ALB",
+                "AWS MongoDB"
             ]
         }
     ]

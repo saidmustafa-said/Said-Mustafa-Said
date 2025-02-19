@@ -76,10 +76,5 @@
 			"description": "Enabled parallel task execution for improved workflow efficiency."
 		}
 	],
-	"links": [
-		{
-			"name": "Project Documentation",
-			"url": ""
-		}
-	]
+	"links": []
 }
