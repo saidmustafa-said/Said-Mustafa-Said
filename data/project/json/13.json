@@ -1,0 +1,73 @@
+{
+	"project_name": "AI Model Fine-Tuning with Data Collection and Evaluation",
+	"description": "The project aimed to fine-tune an AI model through a structured data collection process, followed by evaluation and optimization to improve model performance using custom prompts.",
+	"year": "2024",
+	"month": "6",
+	"role": "",
+	"project_type": "individual",
+	"technologies_used": [
+		{
+			"name": "AI Model Fine-Tuning",
+			"description": "Process of refining a pre-existing AI model using specific datasets to enhance its performance and understanding."
+		},
+		{
+			"name": "Data Collection",
+			"description": "Gathering and processing datasets in a structured manner to support machine learning."
+		},
+		{
+			"name": "Supervised Learning",
+			"description": "A type of machine learning where the model is trained using labeled data."
+		},
+		{
+			"name": "Data Cleaning",
+			"description": "The process of removing errors, inconsistencies, and irrelevant data from the dataset."
+		},
+		{
+			"name": "Feature Engineering",
+			"description": "The creation of new features or transformations of existing features to improve model performance."
+		},
+		{
+			"name": "Model Optimization",
+			"description": "Techniques used to improve the performance of a model, including quantization for resource optimization."
+		}
+	],
+	"infrastructure": [],
+	"skills_required": [
+		{
+			"name": "Data Collection and Organization",
+			"description": "Expertise in gathering and processing large datasets, ensuring relevance and quality."
+		},
+		{
+			"name": "Data Cleaning and Feature Engineering",
+			"description": "Strong skills in cleaning and transforming raw data into structured formats for AI model training."
+		},
+		{
+			"name": "AI Model Fine-Tuning",
+			"description": "Experience in fine-tuning large language models using specific libraries and tools to enhance performance."
+		},
+		{
+			"name": "Custom Prompt Design",
+			"description": "Ability to craft custom prompt templates to improve model comprehension and outputs."
+		},
+		{
+			"name": "Quantization and Model Optimization",
+			"description": "Proficiency in working with quantized models for resource efficiency during training."
+		},
+		{
+			"name": "Supervised Learning",
+			"description": "Understanding of supervised learning techniques, particularly with regards to data labeling and structured learning."
+		}
+	],
+	"challenges_faced": [],
+	"outcomes": [
+		{
+			"name": "Improved AI Model Performance",
+			"description": "The fine-tuned model showed significant improvements in understanding and matching structured data."
+		},
+		{
+			"name": "Custom Prompt Effectiveness",
+			"description": "Custom prompts helped achieve more accurate and contextually relevant outputs."
+		}
+	],
+	"links": []
+}

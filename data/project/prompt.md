@@ -1,142 +1,202 @@
+for project_type → Defines whether it's:
+"individual" → You did it alone
+"team" → You worked on it with others
+"small_task" → A minor task, not a full project
+all are individual
+
+for all the fields if not mentions in the md file, leave it empty:
+{
+  "project_name": "",
+  "description": "",
+  "year": "",
+  "month": "",
+  "role": "",
+  "project_type": "", 
+  "technologies_used": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "infrastructure": [
+    {
+      "name": "",
+      "description": "",
+      "steps": []
+    }
+  ],
+  "skills_required": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "challenges_faced": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "outcomes": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "links": [
+    {
+      "name": "",
+      "url": ""
+    }
+  ]
+}
+
+fill the things that is missing if possible but dont force
+
+use the shared structure and put my projects shared below in the same format each in sepereate json file:
+
+<!-- -------------------------------------------------------------------------------- -->
+
+17 :
 <!-- @format -->
 
-use this : Said Mustafa Said
-| saidmustafa2812@gmail.com
-linkedin.com/in/said-mustafa-said/ | saidmustafa-said.github.io/Said-Mustafa-Said/
+## Overview:
 
-AI and Cloud ML Specialist with 2+ years of experience developing secure, scalable cloud solutions. Skilled in optimizing machine learning workflows and deploying models efficiently on cloud platforms. Known for integrating AI solutions within CI/CD pipelines to streamline deployment, maximize uptime, and enhance operational resilience.
+This project involved creating an automated AWS infrastructure using Terraform to provision and manage a variety of services for a cloud-based application. Key resources included VPC, EKS, RDS, MongoDB, Elasticache, and Vault HCP for secure management.
 
-RELEVANT EXPERIENCE
+## Steps Involved:
 
-Cloud Machine Learning Specialist
-September 2023 - Present
+### VPC Setup:
 
-Skyloop Cloud, Istanbul, Turkey
-• Architected and managed AWS infrastructure for high-performance AI applications, maintaining 99.9% uptime with EC2, S3, and ELB.
-• Developed and deployed machine learning models, leveraging tools like MLflow for streamlined tracking and monitoring of training workflows.
-• Fine-tuned large language models (LLMs) and implemented retrieval-augmented generation (RAG) systems, enhancing model accuracy and relevance in customer-facing applications.
-• Built and integrated intelligent agent-based systems for smart decision-making and choice selection within AI workflows.
-• Automated data processing and collection pipelines, optimizing model training and scaling data ingestion using tools like Grafana and OpenSearch for visualization and performance tracking.
-• Designed and deployed knowledge-based chatbot solutions, improving user interactions with advanced conversational AI.
+- Created a secure Virtual Private Cloud (VPC) for isolated networking.
+- Configured networking components to ensure secure communication between services.
 
-Intern Penetration Tester
-August 2022 – October 2022
-BGA Bilgi Güvenliği A.Ş, Istanbul, Turkey
-• Conducted penetration testing and security audits using Burp Suite and Metasploit, identifying and mitigating critical vulnerabilities across key systems.
-• Automated routine security tasks with Python and Bash, increasing compliance efficiency for recurring processes.
-• Presented complex security concepts to non-technical stakeholders, improving adherence to best practices and protocols.
+### Route 53 Configuration:
 
-EDUCATION
-Bachelor of Science in Software Engineering
-Bahçeşehir University, Istanbul, Turkey
-• Key coursework in AI, cloud computing, cybersecurity, and software engineering principles.
+- Set up Route 53 for DNS management, directing traffic to AWS resources.
+- Ensured proper DNS routing for high availability.
 
-SKILLS
+### Application Load Balancer (ALB) Deployment:
 
-AI & Machine Learning: TensorFlow, PyTorch, hyperparameter tuning, model optimization
-Cloud Platforms: AWS (EC2, S3, Lambda, SageMaker), Kubernetes (EKS), Terraform
-Automation & Scripting: Python, Bash
-Deployment & Integration: CI/CD, Docker
+- Deployed an ALB to efficiently manage incoming traffic.
+- Configured the ALB to direct traffic to applications running on EKS.
 
-CERTIFICATIONS
+### EKS Cluster Provisioning:
 
-AWS Certified DevOps Engineer, Professional - 2024
-AWS Certified Developer, Associate - 2024
-AWS Certified Cloud Practitioner - 2024
-Data Science Graduate Certificate - 2022
+- Set up an EKS cluster with six services for container orchestration.
+- Ensured seamless deployment and management of containerized applications.
 
-saidmustafa2812@gmail.com
-saidmustafa.said@skyloop.cloud
-Professional Summary
-AI-focused cloud machine learning specialist with extensive experience in designing scalable systems and automating AI workflows. Expertise in integrating cloud solutions to enhance AI and ML performance. Combines technical skills with a strong background in cybersecurity to develop secure, efficient technologies. Committed to leveraging cutting-edge AI techniques to drive technological innovation and business solutions.
-Core Qualifications
-• Cloud Systems Integration: Proficient in deploying and managing cloud infrastructure to support AI-driven applications.
-• AI & ML Automation: Skilled in automating AI processes such as model training, hyperparameter tuning, and deployment.
-• Data Handling: Expertise in data preparation and analysis, essential for developing and training machine learning models.
-• Algorithm Optimization: Experienced in refining algorithms to achieve superior model performance and accuracy.
-• Large Language Models (LLMs): Implemented and fine-tuned LLMs for diverse AI applications, including natural language processing.
-• AI Applications: Applied AI techniques to practical projects, enhancing capabilities in areas such as computer vision and data analytics.
-• OCR & Chatbots: Developed and integrated OCR and chatbot solutions, improving data extraction and user interaction.
-• AI Techniques: Deep knowledge of advanced AI methodologies, including deep learning and machine learning.
-Experience
-On-Site – Skyloop Cloud | istanbul, Turkey | September 2023 – Present
-• Engineered scalable AWS infrastructure for AI applications, utilizing EC2, S3, and ELB to ensure high performance and availability.
-• Automated AI workflows with Terraform and Bash scripting, streamlining model deployment and operational processes.
-• Integrated AI solutions into CI/CD pipelines, enhancing deployment efficiency and reducing downtime.
-• Monitored system performance using AWS CloudWatch, maintaining high availability and quickly addressing issues.
-Remote - BGA Bilgi Güvenliği A.Ş | Istanbul, Turkey | August 2022 – October 2022
-• Conducted penetration testing and security audits, utilizing tools such as Burp Suite and Metasploit, identifying and mitigating vulnerabilities.
-• Automated security tasks and compliance processes using Python and Bash scripting, improving operational efficiency.
-• Communicated complex security concepts to stakeholders, enhancing understanding and promoting best practices.
-Remote - Freelancing Script Writer | Istanbul, Turkey | January 2023 - Present
-• Developed automation scripts for Linux systems, significantly reducing recovery time and improving stability.
-• Applied web scraping techniques with BeautifulSoup and Scrapy, collecting data for AI and ML projects.
-• Created an AI-integrated trading bot, utilizing Python and TensorFlow for enhanced stock market analysis.
-Education - Bahcesehir University | Bachelor of Science | Software Engineering
-Bachelor of Science in Software Engineering
-Skills
-• Decision-Making
-• Pandas and NumPy
-• Scikit-learn, TensorFlow, PyTorch
-• Hugging Face Transformers, OpenAI APIs
-• Operating Systems: Linux (Kali Linux), Windows
-• Deep Learning Algorithms
-• Python and Java Development
-• Forecasting and Planning • Math Expertise
-• MySQL
-• Agile Methodology
-• Data Visualization (Matplotlib, Seaborn)
-• Large Language Models (LLMs) and Natural Language Processing (NLP)
-• Fine-Tuning and Model Training
-• Git and Version Control Systems
-Languages
-ENGLISH
-TURKISH
-PERSIAN
+### RDS Integration:
 
-Certificates
-• Introduction to Artificial Intelligence (AI)
-• Machine Learning Specialization
-• Introduction to Generative AI
-• Data Science Graduate Certificate • Penetration Testing and Exploitation
-• JavaScript DE-obfuscation
-• Computer Systems Security
-• AWS Cloud Practitioner
-Social Accounts
-LinkedIn: https://www.linkedin.com/in/said-mustafa-said/
-GitHub: https://github.com/saidmustafa-said
+- Integrated AWS RDS to handle relational database management for persistent data storage.
 
-you will use these and then i will share my project with you and you will clean it and give me back a more structured and clean version of it in md and a json that will look like this :
+### MongoDB Setup:
 
-template for md:{Overview:
-A brief summary of the project, its objectives, and technologies used.
+- Installed and configured MongoDB as a NoSQL solution for handling unstructured data.
 
-Steps Involved:
-[Step Title]:
+### Elasticache Deployment:
 
-Key actions or tasks performed during this step.
-Any specific configurations, tools, or services used.
-[Step Title]:
+- Implemented Elasticache for in-memory data caching, improving system performance and reducing latency.
 
-Additional steps or tasks, detailing what was accomplished.
-Key technologies involved.
-[Step Title]:
+### Vault HCP Integration:
 
-Continue detailing the steps involved in the project.
-(Repeat the steps as necessary based on the complexity of the project.)
+- Integrated Vault HCP for managing secrets and ensuring secure configuration.
 
-Skills Required:
-[Skill Type]: Description of the skill used in the project.
-[Skill Type]: Another skill or tool used for the project.
-[Skill Type]: Continue listing all relevant skills used during the project.}
+### Service Mesh Implementation:
 
-    {
-      "id":[Unique ID, ](int),
-      "title": "[Project Title]",
-      "description": "[Brief description of the project]",
-      "year": YYYY,
-      "month": MMMM(int),
-      "topics": ["[Topic1]", "[Topic2]", "[Topic3]"]
-    }
+- Set up a service mesh to manage microservice communication, enhancing observability, security, and traffic management.
 
-are you ready ?
+### Helm Charts:
+
+- Used Helm charts for the easy deployment and management of Kubernetes applications on EKS.
+
+## Skills Required:
+
+- **Terraform**: Used to automate infrastructure provisioning and manage AWS services.
+- **AWS Services**: Knowledge of AWS services such as VPC, Route 53, ALB, EKS, RDS, and Elasticache.
+- **Kubernetes**: Proficient in managing container orchestration with EKS.
+- **Helm Charts**: Experience with Helm for managing Kubernetes applications.
+- **Vault HCP**: Expertise in integrating Vault for secure secret management.
+- **Service Mesh**: Knowledge of service mesh technologies for microservice communication.
+- **Networking**: Familiarity with AWS networking, VPC, Route 53, and load balancing (ALB).
+- **Database Management**: Proficiency in both RDS (SQL) and MongoDB (NoSQL).
+- **Cloud Security**: Experience in securing cloud environments using best practices and tools like Vault.
+
+		{
+			"id": 17,
+			"title": "AWS Infrastructure Setup with Terraform",
+			"description": "Automated AWS infrastructure provisioning using Terraform, incorporating services like EKS, RDS, MongoDB, and Vault for a cloud-based application setup.",
+			"year": 2024,
+			"month": 9,
+			"topics": [
+				"AWS",
+				"Terraform",
+				"Kubernetes",
+				"Cloud Security",
+				"Service Mesh",
+				"Helm Charts",
+				"Database Management"
+			]
+		},
+
+18:
+
+<!-- @format -->
+
+### Overview
+
+This project implements a Step Functions workflow to automate decision-making processes. The system validates data across checkpoints such as size, color, financial data, sample/serial status, and notifications, ensuring accuracy and efficiency.
+
+---
+
+### Steps Involved
+
+#### Size Check
+
+- Ensures size information is valid and prompts the user if missing.
+
+#### Financial Data Validation
+
+- Verifies completeness of financial data, including raw material, auxiliary material, and labor inputs.
+
+#### Color Check
+
+- Confirms color selection or prompts for input if missing.
+
+#### Sample/Serial Status
+
+- Manages confirmation or cancellation of sample/serial status.
+
+#### Notifications
+
+- Sends alerts or notifications for missing data and provides feedback to users.
+
+---
+
+### Skills Required
+
+- **Workflow Automation:** Designing Step Functions workflows.
+- **AWS Services:** Leveraging AWS tools like Lambda and Step Functions.
+- **Error Handling:** Implementing robust error tracking and prompts.
+- **Data Validation:** Ensuring data accuracy and completeness.
+
+---
+
+### Outcome
+
+The workflow streamlines decision-making processes, enhances data validation, and provides clear feedback to users, all while enabling parallel task execution for efficiency.
+
+
+		{
+			"id": 18,
+			"title": "Step Functions Workflow Implementation",
+			"description": "A project to automate and manage decision-making processes using AWS Step Functions. It ensures data validation, error handling, and efficient task execution.",
+			"year": 2024,
+			"month": 9,
+			"topics": [
+				"Workflow Automation",
+				"AWS Step Functions",
+				"Data Validation",
+				"Error Handling"
+			]
+		},

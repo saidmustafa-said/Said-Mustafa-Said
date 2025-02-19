@@ -1,0 +1,93 @@
+{
+	"project_name": "Terraform for AWS and SageMaker Model Deployment",
+	"description": "Automated AWS infrastructure provisioning using Terraform, including Elastic Beanstalk, API Gateway, Lambda, and SageMaker for machine learning model deployment and real-time inference.",
+	"year": "2023",
+	"month": "10",
+	"role": "",
+	"project_type": "individual",
+	"technologies_used": [
+		{
+			"name": "Terraform",
+			"description": "Automates the provisioning and management of AWS services like Elastic Beanstalk, API Gateway, Lambda, and SageMaker."
+		},
+		{
+			"name": "AWS",
+			"description": "Cloud services platform used for deploying the infrastructure and enabling machine learning capabilities."
+		},
+		{
+			"name": "SageMaker",
+			"description": "AWS service for training and deploying machine learning models."
+		},
+		{
+			"name": "Django",
+			"description": "Web framework used to build the web application that interfaces with SageMaker."
+		},
+		{
+			"name": "Serverless Architectures",
+			"description": "Utilized AWS Lambda for serverless image processing and machine learning inference."
+		}
+	],
+	"infrastructure": [
+		{
+			"name": "Elastic Beanstalk",
+			"description": "Deployed a Django web application using AWS Elastic Beanstalk.",
+			"steps": [
+				"Provisioned the Django app on Elastic Beanstalk for scalable deployment."
+			]
+		},
+		{
+			"name": "API Gateway",
+			"description": "Configured API Gateway to expose SageMaker predictions securely.",
+			"steps": [
+				"Set up secure API endpoints for web application integration with SageMaker."
+			]
+		},
+		{
+			"name": "Lambda",
+			"description": "Created AWS Lambda functions for image processing and invoking SageMaker endpoints.",
+			"steps": [
+				"Developed Lambda functions to process images and invoke SageMaker inference."
+			]
+		},
+		{
+			"name": "SageMaker",
+			"description": "Set up SageMaker for model training and real-time inference.",
+			"steps": [
+				"Trained machine learning models and created inference endpoints."
+			]
+		}
+	],
+	"skills_required": [
+		{
+			"name": "Infrastructure as Code (IaC)",
+			"description": "Advanced proficiency in Terraform for automating AWS service provisioning."
+		},
+		{
+			"name": "Machine Learning (ML)",
+			"description": "Expertise in optimizing and debugging machine learning models using SageMaker."
+		},
+		{
+			"name": "Model Deployment",
+			"description": "Experience deploying models on SageMaker and integrating with web applications."
+		},
+		{
+			"name": "Web Development",
+			"description": "Built and deployed a Django web application integrated with SageMaker for machine learning predictions."
+		},
+		{
+			"name": "Serverless Architectures",
+			"description": "Experience with AWS Lambda to handle serverless computing tasks."
+		},
+		{
+			"name": "AWS Integration",
+			"description": "Managed end-to-end integration of AWS services for model deployment and real-time inference."
+		},
+		{
+			"name": "Boto3",
+			"description": "Used Boto3 to manage interactions between S3, Lambda, and SageMaker."
+		}
+	],
+	"challenges_faced": [],
+	"outcomes": [],
+	"links": []
+}
