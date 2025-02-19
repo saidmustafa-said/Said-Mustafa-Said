@@ -1,107 +1,114 @@
 {
-	"project_name": "Terraform and CI/CD for AWS Services with Multi-Environment Setup",
-	"description": "Set up AWS infrastructure using Terraform and implemented a CI/CD pipeline to manage deployments across production and staging environments. The project involved the configuration of various AWS services including CodePipeline, RDS, VPC, ECS, Redis, ALB, Bastion EC2, SES, Route 53, and SSL certificates.",
-	"year": "2024",
-	"month": "1",
-	"role": "",
-	"project_type": "individual",
-	"technologies_used": [
-		{
-			"name": "Terraform",
-			"description": "Used Terraform to provision and manage AWS infrastructure, including multi-environment setups."
-		},
-		{
-			"name": "AWS Services",
-			"description": "Configured multiple AWS services including CodePipeline, RDS, VPC, ECS, Redis, ALB, Bastion EC2, SES, Route 53, and SSL certificates."
-		},
-		{
-			"name": "CI/CD Pipeline",
-			"description": "Implemented CI/CD pipelines using CodePipeline for automated build and deployment across environments."
-		},
-		{
-			"name": "Multi-Environment Setup",
-			"description": "Configured separate environments for production and staging deployments."
-		},
-		{
-			"name": "ECS",
-			"description": "Managed containerized application deployments on Amazon ECS."
-		},
-		{
-			"name": "RDS",
-			"description": "Used Amazon RDS for database management."
-		},
-		{
-			"name": "Redis",
-			"description": "Implemented Redis for caching and session management."
-		},
-		{
-			"name": "SSL Certificates",
-			"description": "Configured SSL certificates for secure HTTPS connections."
-		},
-		{
-			"name": "Route 53",
-			"description": "Used Route 53 for DNS management and domain routing."
-		}
-	],
-	"infrastructure": [
-		{
-			"name": "AWS CodePipeline",
-			"description": "Set up CodePipeline for continuous integration and deployment.",
-			"steps": [
-				"Automated the pipeline to pull code, build Docker images, and deploy to ECS."
-			]
-		},
-		{
-			"name": "Amazon RDS",
-			"description": "Set up RDS for relational database management and connection handling.",
-			"steps": ["Managed RDS instances for different environments."]
-		},
-		{
-			"name": "Amazon VPC",
-			"description": "Set up a VPC for secure networking and resource isolation."
-		},
-		{
-			"name": "Amazon ECS",
-			"description": "Managed ECS for container deployment and orchestration.",
-			"steps": ["Deployed applications using ECS and managed service scaling."]
-		},
-		{
-			"name": "Redis",
-			"description": "Implemented Redis for caching and session management.",
-			"steps": ["Integrated Redis for improved application performance."]
-		},
-		{
-			"name": "Amazon ALB",
-			"description": "Configured ALB for load balancing across ECS services."
-		},
-		{
-			"name": "Route 53",
-			"description": "Used Route 53 for DNS routing and domain management."
-		}
-	],
-	"skills_required": [
-		{
-			"name": "Terraform",
-			"description": "Proficiency in using Terraform for managing multi-environment infrastructure."
-		},
-		{
-			"name": "AWS Services",
-			"description": "Experience configuring a wide range of AWS services including ECS, RDS, Redis, and Route 53."
-		},
-		{
-			"name": "CI/CD Pipeline",
-			"description": "Knowledge of automating the build and deployment process using CodePipeline."
-		},
-		{
-			"name": "Multi-Environment Management",
-			"description": "Experience in configuring separate environments for production and staging."
-		},
-		{
-			"name": "Routing and Domain Management",
-			"description": "Expertise in managing DNS and domain routing using Route 53."
-		}
-	],
-	"challenges_faced": [],
-	"outcomes": [],
-	"links": []
+    "id": 8,
+    "project_name": "Terraform and CI/CD for AWS Services with Multi-Environment Setup",
+    "description": "Set up AWS infrastructure using Terraform and implemented a CI/CD pipeline to manage deployments across production and staging environments. The project involved the configuration of various AWS services including CodePipeline, RDS, VPC, ECS, Redis, ALB, Bastion EC2, SES, Route 53, and SSL certificates.",
+    "year": 2024,
+    "month": 1,
+    "role": "",
+    "project_type": "individual",
+    "technologies_used": [
+        {
+            "name": "Terraform",
+            "description": "Used Terraform to provision and manage AWS infrastructure, including multi-environment setups."
+        },
+        {
+            "name": "AWS Services",
+            "description": "Configured multiple AWS services including CodePipeline, RDS, VPC, ECS, Redis, ALB, Bastion EC2, SES, Route 53, and SSL certificates."
+        },
+        {
+            "name": "CI/CD Pipeline",
+            "description": "Implemented CI/CD pipelines using CodePipeline for automated build and deployment across environments."
+        },
+        {
+            "name": "Multi-Environment Setup",
+            "description": "Configured separate environments for production and staging deployments."
+        },
+        {
+            "name": "ECS",
+            "description": "Managed containerized application deployments on Amazon ECS."
+        },
+        {
+            "name": "RDS",
+            "description": "Used Amazon RDS for database management."
+        },
+        {
+            "name": "Redis",
+            "description": "Implemented Redis for caching and session management."
+        },
+        {
+            "name": "SSL Certificates",
+            "description": "Configured SSL certificates for secure HTTPS connections."
+        },
+        {
+            "name": "Route 53",
+            "description": "Used Route 53 for DNS management and domain routing."
+        }
+    ],
+    "infrastructure": [
+        {
+            "name": "AWS CodePipeline",
+            "description": "Set up CodePipeline for continuous integration and deployment.",
+            "steps": [
+                "Automated the pipeline to pull code, build Docker images, and deploy to ECS."
+            ]
+        },
+        {
+            "name": "Amazon RDS",
+            "description": "Set up RDS for relational database management and connection handling.",
+            "steps": [
+                "Managed RDS instances for different environments."
+            ]
+        },
+        {
+            "name": "Amazon VPC",
+            "description": "Set up a VPC for secure networking and resource isolation."
+        },
+        {
+            "name": "Amazon ECS",
+            "description": "Managed ECS for container deployment and orchestration.",
+            "steps": [
+                "Deployed applications using ECS and managed service scaling."
+            ]
+        },
+        {
+            "name": "Redis",
+            "description": "Implemented Redis for caching and session management.",
+            "steps": [
+                "Integrated Redis for improved application performance."
+            ]
+        },
+        {
+            "name": "Amazon ALB",
+            "description": "Configured ALB for load balancing across ECS services."
+        },
+        {
+            "name": "Route 53",
+            "description": "Used Route 53 for DNS routing and domain management."
+        }
+    ],
+    "skills_required": [
+        {
+            "name": "Terraform",
+            "description": "Proficiency in using Terraform for managing multi-environment infrastructure."
+        },
+        {
+            "name": "AWS Services",
+            "description": "Experience configuring a wide range of AWS services including ECS, RDS, Redis, and Route 53."
+        },
+        {
+            "name": "CI/CD Pipeline",
+            "description": "Knowledge of automating the build and deployment process using CodePipeline."
+        },
+        {
+            "name": "Multi-Environment Management",
+            "description": "Experience in configuring separate environments for production and staging."
+        },
+        {
+            "name": "Routing and Domain Management",
+            "description": "Expertise in managing DNS and domain routing using Route 53."
+        }
+    ],
+    "challenges_faced": [],
+    "outcomes": [],
+    "links": []
 }

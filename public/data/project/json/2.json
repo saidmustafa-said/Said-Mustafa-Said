@@ -1,121 +1,122 @@
 {
-	"project_name": "Terraform for AWS",
-	"description": "Automated the provisioning of a complex AWS infrastructure using Terraform. Included services like VPC, CloudFront, EC2, ALB, ElastiCache, Amazon MQ, and S3 to ensure high availability, scalability, and secure traffic management.",
-	"year": "2023",
-	"month": "9",
-	"role": "",
-	"project_type": "individual",
-	"technologies_used": [
-		{
-			"name": "Terraform",
-			"description": "Tool to automate infrastructure provisioning and management."
-		},
-		{
-			"name": "AWS",
-			"description": "Comprehensive cloud services platform."
-		},
-		{
-			"name": "CloudFront",
-			"description": "Content delivery network (CDN) for low-latency access to data."
-		},
-		{
-			"name": "ElastiCache",
-			"description": "Managed Redis service for caching to enhance performance."
-		},
-		{
-			"name": "Amazon MQ",
-			"description": "Managed message broker service to enable asynchronous communication."
-		},
-		{
-			"name": "S3",
-			"description": "Cloud storage service for static files and backups."
-		}
-	],
-	"infrastructure": [
-		{
-			"name": "VPC Setup",
-			"description": "Created a VPC with public and private subnets, routing tables, and NAT gateways.",
-			"steps": [
-				"Deployed VPC with subnets and routing tables.",
-				"Implemented NAT gateways and security groups."
-			]
-		},
-		{
-			"name": "CloudFront Distribution",
-			"description": "Configured CloudFront for high-speed and secure content delivery from S3.",
-			"steps": [
-				"Set up CloudFront distribution for secure content delivery.",
-				"Configured caching and SSL/TLS for encryption."
-			]
-		},
-		{
-			"name": "EC2 Instance Setup",
-			"description": "Provisioned EC2 instances in private subnet with proper IAM roles and auto-scaling.",
-			"steps": [
-				"Deployed EC2 instances with IAM roles and auto-scaling.",
-				"Set up security groups for communication."
-			]
-		},
-		{
-			"name": "Application Load Balancer (ALB)",
-			"description": "Set up ALB to distribute traffic across EC2 instances with HTTPS.",
-			"steps": [
-				"Configured ALB for secure traffic distribution.",
-				"Set up health checks and HTTPS listener."
-			]
-		},
-		{
-			"name": "ElastiCache Deployment",
-			"description": "Implemented Redis through ElastiCache for better performance.",
-			"steps": [
-				"Provisioned ElastiCache Redis cluster.",
-				"Configured connections to EC2 instances."
-			]
-		},
-		{
-			"name": "Amazon MQ Setup",
-			"description": "Deployed Amazon MQ to facilitate message queueing between services.",
-			"steps": [
-				"Configured Amazon MQ for message queueing.",
-				"Ensured proper network configuration for EC2 communication."
-			]
-		},
-		{
-			"name": "S3 Bucket Configuration",
-			"description": "Set up S3 buckets for file storage and backups with security policies.",
-			"steps": [
-				"Created S3 buckets for storage.",
-				"Configured IAM permissions and bucket policies."
-			]
-		}
-	],
-	"skills_required": [
-		{
-			"name": "Infrastructure as Code (IaC)",
-			"description": "Expert in Terraform to automate the provisioning of AWS resources."
-		},
-		{
-			"name": "Networking",
-			"description": "In-depth knowledge of VPC, subnets, routing tables, and NAT gateways."
-		},
-		{
-			"name": "Content Delivery Networks (CDN)",
-			"description": "Configured CloudFront for secure, low-latency content delivery."
-		},
-		{
-			"name": "Caching and Messaging Services",
-			"description": "Implemented ElastiCache for caching and Amazon MQ for message queueing."
-		},
-		{
-			"name": "AWS Services Integration",
-			"description": "Managed multiple AWS services to ensure scalability and security."
-		},
-		{
-			"name": "Security",
-			"description": "Implemented best practices for IAM, SSL/TLS encryption, and access control."
-		}
-	],
-	"challenges_faced": [],
-	"outcomes": [],
-	"links": []
+    "id": 2,
+    "project_name": "Terraform for AWS",
+    "description": "Automated the provisioning of a complex AWS infrastructure using Terraform. Included services like VPC, CloudFront, EC2, ALB, ElastiCache, Amazon MQ, and S3 to ensure high availability, scalability, and secure traffic management.",
+    "year": 2023,
+    "month": 9,
+    "role": "",
+    "project_type": "individual",
+    "technologies_used": [
+        {
+            "name": "Terraform",
+            "description": "Tool to automate infrastructure provisioning and management."
+        },
+        {
+            "name": "AWS",
+            "description": "Comprehensive cloud services platform."
+        },
+        {
+            "name": "CloudFront",
+            "description": "Content delivery network (CDN) for low-latency access to data."
+        },
+        {
+            "name": "ElastiCache",
+            "description": "Managed Redis service for caching to enhance performance."
+        },
+        {
+            "name": "Amazon MQ",
+            "description": "Managed message broker service to enable asynchronous communication."
+        },
+        {
+            "name": "S3",
+            "description": "Cloud storage service for static files and backups."
+        }
+    ],
+    "infrastructure": [
+        {
+            "name": "VPC Setup",
+            "description": "Created a VPC with public and private subnets, routing tables, and NAT gateways.",
+            "steps": [
+                "Deployed VPC with subnets and routing tables.",
+                "Implemented NAT gateways and security groups."
+            ]
+        },
+        {
+            "name": "CloudFront Distribution",
+            "description": "Configured CloudFront for high-speed and secure content delivery from S3.",
+            "steps": [
+                "Set up CloudFront distribution for secure content delivery.",
+                "Configured caching and SSL/TLS for encryption."
+            ]
+        },
+        {
+            "name": "EC2 Instance Setup",
+            "description": "Provisioned EC2 instances in private subnet with proper IAM roles and auto-scaling.",
+            "steps": [
+                "Deployed EC2 instances with IAM roles and auto-scaling.",
+                "Set up security groups for communication."
+            ]
+        },
+        {
+            "name": "Application Load Balancer (ALB)",
+            "description": "Set up ALB to distribute traffic across EC2 instances with HTTPS.",
+            "steps": [
+                "Configured ALB for secure traffic distribution.",
+                "Set up health checks and HTTPS listener."
+            ]
+        },
+        {
+            "name": "ElastiCache Deployment",
+            "description": "Implemented Redis through ElastiCache for better performance.",
+            "steps": [
+                "Provisioned ElastiCache Redis cluster.",
+                "Configured connections to EC2 instances."
+            ]
+        },
+        {
+            "name": "Amazon MQ Setup",
+            "description": "Deployed Amazon MQ to facilitate message queueing between services.",
+            "steps": [
+                "Configured Amazon MQ for message queueing.",
+                "Ensured proper network configuration for EC2 communication."
+            ]
+        },
+        {
+            "name": "S3 Bucket Configuration",
+            "description": "Set up S3 buckets for file storage and backups with security policies.",
+            "steps": [
+                "Created S3 buckets for storage.",
+                "Configured IAM permissions and bucket policies."
+            ]
+        }
+    ],
+    "skills_required": [
+        {
+            "name": "Infrastructure as Code (IaC)",
+            "description": "Expert in Terraform to automate the provisioning of AWS resources."
+        },
+        {
+            "name": "Networking",
+            "description": "In-depth knowledge of VPC, subnets, routing tables, and NAT gateways."
+        },
+        {
+            "name": "Content Delivery Networks (CDN)",
+            "description": "Configured CloudFront for secure, low-latency content delivery."
+        },
+        {
+            "name": "Caching and Messaging Services",
+            "description": "Implemented ElastiCache for caching and Amazon MQ for message queueing."
+        },
+        {
+            "name": "AWS Services Integration",
+            "description": "Managed multiple AWS services to ensure scalability and security."
+        },
+        {
+            "name": "Security",
+            "description": "Implemented best practices for IAM, SSL/TLS encryption, and access control."
+        }
+    ],
+    "challenges_faced": [],
+    "outcomes": [],
+    "links": []
 }

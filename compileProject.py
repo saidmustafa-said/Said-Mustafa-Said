@@ -2,8 +2,8 @@ import os
 import json
 
 # Define the directory where your JSON files are stored
-directory = "build/data/project/json/"
-output_file = "build/data/project/timelinetotal.json"
+directory = "public/data/project/json/"
+output_file = "public/data/project/timelinetotal.json"
 
 # List to store merged and transformed JSON data
 merged_data = []
@@ -66,3 +66,4 @@ with open(output_file, 'w') as f:
     json.dump(output_data, f, indent=4)
 
 print(f"Merged and transformed JSON files into {output_file} in order of 'id' (descending) with 'timeline' key")
+

@@ -1,89 +1,90 @@
 {
-	"project_name": "Migration from Cassandra on EC2 to Cassandra on EKS",
-	"description": "Successfully migrated data between two Cassandra clusters, moving from EC2-hosted environment to EKS-hosted Cassandra. Focused on data consistency, minimal downtime, and schema replication.",
-	"year": "2024",
-	"month": "5",
-	"role": "",
-	"project_type": "individual",
-	"technologies_used": [
-		{
-			"name": "Apache Cassandra",
-			"description": "Managed and migrated Cassandra databases between EC2 and EKS environments."
-		},
-		{
-			"name": "Apache Spark",
-			"description": "Used Spark for efficient large-scale data migration between Cassandra clusters."
-		},
-		{
-			"name": "EKS",
-			"description": "Migrated Cassandra to Kubernetes-managed clusters for improved scalability."
-		}
-	],
-	"infrastructure": [
-		{
-			"name": "Cassandra on EC2",
-			"description": "Original setup with Cassandra hosted on EC2 instances.",
-			"steps": [
-				"Established secure connection to the source Cassandra cluster on EC2."
-			]
-		},
-		{
-			"name": "Cassandra on EKS",
-			"description": "Target setup with Cassandra hosted on EKS (Kubernetes).",
-			"steps": [
-				"Set up Cassandra on EKS for improved scalability and management."
-			]
-		},
-		{
-			"name": "Data Migration Using Spark",
-			"description": "Used Spark jobs to migrate large datasets between Cassandra clusters.",
-			"steps": [
-				"Migrated data from EC2-hosted Cassandra to EKS-hosted Cassandra using Spark."
-			]
-		}
-	],
-	"skills_required": [
-		{
-			"name": "Cassandra Administration",
-			"description": "Experience managing and migrating Cassandra databases across different platforms."
-		},
-		{
-			"name": "Apache Spark",
-			"description": "Proficiency in using Spark for data migration tasks."
-		},
-		{
-			"name": "Data Migration",
-			"description": "Handling large-scale migrations while ensuring data consistency."
-		},
-		{
-			"name": "EKS",
-			"description": "Understanding of running Cassandra in Kubernetes (EKS)."
-		}
-	],
-	"challenges_faced": [
-		{
-			"name": "Minimizing Downtime During Migration",
-			"description": "Ensuring minimal downtime during the migration of large datasets."
-		},
-		{
-			"name": "Data Consistency",
-			"description": "Ensuring data consistency between the source and target clusters during migration."
-		}
-	],
-	"outcomes": [
-		{
-			"name": "Successful Data Migration",
-			"description": "Successfully migrated the data with no loss and minimal downtime."
-		},
-		{
-			"name": "Seamless Transition to EKS",
-			"description": "Migrated to Kubernetes-managed Cassandra on EKS for better scalability."
-		}
-	],
-	"links": [
-		{
-			"name": "",
-			"url": ""
-		}
-	]
+    "id": 12,
+    "project_name": "Migration from Cassandra on EC2 to Cassandra on EKS",
+    "description": "Successfully migrated data between two Cassandra clusters, moving from EC2-hosted environment to EKS-hosted Cassandra. Focused on data consistency, minimal downtime, and schema replication.",
+    "year": 2024,
+    "month": 5,
+    "role": "",
+    "project_type": "individual",
+    "technologies_used": [
+        {
+            "name": "Apache Cassandra",
+            "description": "Managed and migrated Cassandra databases between EC2 and EKS environments."
+        },
+        {
+            "name": "Apache Spark",
+            "description": "Used Spark for efficient large-scale data migration between Cassandra clusters."
+        },
+        {
+            "name": "EKS",
+            "description": "Migrated Cassandra to Kubernetes-managed clusters for improved scalability."
+        }
+    ],
+    "infrastructure": [
+        {
+            "name": "Cassandra on EC2",
+            "description": "Original setup with Cassandra hosted on EC2 instances.",
+            "steps": [
+                "Established secure connection to the source Cassandra cluster on EC2."
+            ]
+        },
+        {
+            "name": "Cassandra on EKS",
+            "description": "Target setup with Cassandra hosted on EKS (Kubernetes).",
+            "steps": [
+                "Set up Cassandra on EKS for improved scalability and management."
+            ]
+        },
+        {
+            "name": "Data Migration Using Spark",
+            "description": "Used Spark jobs to migrate large datasets between Cassandra clusters.",
+            "steps": [
+                "Migrated data from EC2-hosted Cassandra to EKS-hosted Cassandra using Spark."
+            ]
+        }
+    ],
+    "skills_required": [
+        {
+            "name": "Cassandra Administration",
+            "description": "Experience managing and migrating Cassandra databases across different platforms."
+        },
+        {
+            "name": "Apache Spark",
+            "description": "Proficiency in using Spark for data migration tasks."
+        },
+        {
+            "name": "Data Migration",
+            "description": "Handling large-scale migrations while ensuring data consistency."
+        },
+        {
+            "name": "EKS",
+            "description": "Understanding of running Cassandra in Kubernetes (EKS)."
+        }
+    ],
+    "challenges_faced": [
+        {
+            "name": "Minimizing Downtime During Migration",
+            "description": "Ensuring minimal downtime during the migration of large datasets."
+        },
+        {
+            "name": "Data Consistency",
+            "description": "Ensuring data consistency between the source and target clusters during migration."
+        }
+    ],
+    "outcomes": [
+        {
+            "name": "Successful Data Migration",
+            "description": "Successfully migrated the data with no loss and minimal downtime."
+        },
+        {
+            "name": "Seamless Transition to EKS",
+            "description": "Migrated to Kubernetes-managed Cassandra on EKS for better scalability."
+        }
+    ],
+    "links": [
+        {
+            "name": "",
+            "url": ""
+        }
+    ]
 }

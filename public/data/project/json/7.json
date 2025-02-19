@@ -1,101 +1,112 @@
 {
-	"project_name": "Terraform and CI/CD for AWS Services",
-	"description": "This project involved setting up an AWS infrastructure using Terraform and implementing a CI/CD pipeline for automated deployments. The infrastructure included AWS services such as CodePipeline, RDS, VPC, EKS, S3, VPN, and Bastion EC2, with secure connectivity between EKS and RDS.",
-	"year": "2023",
-	"month": "12",
-	"role": "",
-	"project_type": "individual",
-	"technologies_used": [
-		{
-			"name": "Terraform",
-			"description": "Automated the setup and management of AWS infrastructure, including services like CodePipeline, RDS, VPC, and EKS."
-		},
-		{
-			"name": "CI/CD",
-			"description": "Implemented continuous integration and continuous deployment pipelines for seamless application deployment."
-		},
-		{
-			"name": "AWS Services",
-			"description": "Utilized various AWS services including CodePipeline, RDS, VPC, and Bastion EC2 for a complete cloud-based infrastructure."
-		},
-		{
-			"name": "EKS",
-			"description": "Deployed and managed containerized applications using Amazon EKS for Kubernetes orchestration."
-		},
-		{
-			"name": "RDS",
-			"description": "Used Amazon RDS for database management and migrated data to MySQL RDS."
-		},
-		{
-			"name": "VPC",
-			"description": "Set up a Virtual Private Cloud (VPC) for secure and isolated networking."
-		},
-		{
-			"name": "Automation",
-			"description": "Automated deployment processes through GitHub Actions and AWS CodePipeline."
-		}
-	],
-	"infrastructure": [
-		{
-			"name": "AWS CodePipeline",
-			"description": "Configured AWS CodePipeline for continuous integration and deployment.",
-			"steps": [
-				"Automated the build and deployment process from GitHub to EKS."
-			]
-		},
-		{
-			"name": "Amazon RDS",
-			"description": "Set up RDS for database management and migrated existing data.",
-			"steps": ["Migrated data to MySQL RDS and ensured proper configurations."]
-		},
-		{
-			"name": "Amazon VPC",
-			"description": "Configured a VPC for secure networking and resource isolation.",
-			"steps": ["Set up VPC and subnets for EKS and other AWS services."]
-		},
-		{
-			"name": "Amazon EKS",
-			"description": "Managed Kubernetes clusters with Amazon EKS for container orchestration.",
-			"steps": ["Deployed applications to EKS using Docker containers."]
-		},
-		{
-			"name": "S3",
-			"description": "Utilized Amazon S3 for artifact and data storage.",
-			"steps": ["Stored application artifacts and backups in S3."]
-		},
-		{
-			"name": "VPN and Bastion EC2",
-			"description": "Implemented secure connectivity with a VPN and Bastion EC2.",
-			"steps": ["Established secure VPN for communication between EKS and RDS."]
-		}
-	],
-	"skills_required": [
-		{
-			"name": "Terraform",
-			"description": "Proficiency in using Terraform for automating AWS resource provisioning and management."
-		},
-		{
-			"name": "CI/CD",
-			"description": "Experience with CI/CD pipeline setup using GitHub Actions and AWS CodePipeline."
-		},
-		{
-			"name": "AWS Services",
-			"description": "Knowledge of AWS services including CodePipeline, RDS, VPC, and EKS."
-		},
-		{
-			"name": "EKS",
-			"description": "Experience in deploying and managing containerized applications with EKS."
-		},
-		{
-			"name": "RDS",
-			"description": "Experience in managing MySQL databases with RDS and handling data migrations."
-		},
-		{
-			"name": "Automation",
-			"description": "Expertise in automating deployment processes using GitHub Actions and AWS tools."
-		}
-	],
-	"challenges_faced": [],
-	"outcomes": [],
-	"links": []
+    "id": 7,
+    "project_name": "Terraform and CI/CD for AWS Services",
+    "description": "This project involved setting up an AWS infrastructure using Terraform and implementing a CI/CD pipeline for automated deployments. The infrastructure included AWS services such as CodePipeline, RDS, VPC, EKS, S3, VPN, and Bastion EC2, with secure connectivity between EKS and RDS.",
+    "year": 2023,
+    "month": 12,
+    "role": "",
+    "project_type": "individual",
+    "technologies_used": [
+        {
+            "name": "Terraform",
+            "description": "Automated the setup and management of AWS infrastructure, including services like CodePipeline, RDS, VPC, and EKS."
+        },
+        {
+            "name": "CI/CD",
+            "description": "Implemented continuous integration and continuous deployment pipelines for seamless application deployment."
+        },
+        {
+            "name": "AWS Services",
+            "description": "Utilized various AWS services including CodePipeline, RDS, VPC, and Bastion EC2 for a complete cloud-based infrastructure."
+        },
+        {
+            "name": "EKS",
+            "description": "Deployed and managed containerized applications using Amazon EKS for Kubernetes orchestration."
+        },
+        {
+            "name": "RDS",
+            "description": "Used Amazon RDS for database management and migrated data to MySQL RDS."
+        },
+        {
+            "name": "VPC",
+            "description": "Set up a Virtual Private Cloud (VPC) for secure and isolated networking."
+        },
+        {
+            "name": "Automation",
+            "description": "Automated deployment processes through GitHub Actions and AWS CodePipeline."
+        }
+    ],
+    "infrastructure": [
+        {
+            "name": "AWS CodePipeline",
+            "description": "Configured AWS CodePipeline for continuous integration and deployment.",
+            "steps": [
+                "Automated the build and deployment process from GitHub to EKS."
+            ]
+        },
+        {
+            "name": "Amazon RDS",
+            "description": "Set up RDS for database management and migrated existing data.",
+            "steps": [
+                "Migrated data to MySQL RDS and ensured proper configurations."
+            ]
+        },
+        {
+            "name": "Amazon VPC",
+            "description": "Configured a VPC for secure networking and resource isolation.",
+            "steps": [
+                "Set up VPC and subnets for EKS and other AWS services."
+            ]
+        },
+        {
+            "name": "Amazon EKS",
+            "description": "Managed Kubernetes clusters with Amazon EKS for container orchestration.",
+            "steps": [
+                "Deployed applications to EKS using Docker containers."
+            ]
+        },
+        {
+            "name": "S3",
+            "description": "Utilized Amazon S3 for artifact and data storage.",
+            "steps": [
+                "Stored application artifacts and backups in S3."
+            ]
+        },
+        {
+            "name": "VPN and Bastion EC2",
+            "description": "Implemented secure connectivity with a VPN and Bastion EC2.",
+            "steps": [
+                "Established secure VPN for communication between EKS and RDS."
+            ]
+        }
+    ],
+    "skills_required": [
+        {
+            "name": "Terraform",
+            "description": "Proficiency in using Terraform for automating AWS resource provisioning and management."
+        },
+        {
+            "name": "CI/CD",
+            "description": "Experience with CI/CD pipeline setup using GitHub Actions and AWS CodePipeline."
+        },
+        {
+            "name": "AWS Services",
+            "description": "Knowledge of AWS services including CodePipeline, RDS, VPC, and EKS."
+        },
+        {
+            "name": "EKS",
+            "description": "Experience in deploying and managing containerized applications with EKS."
+        },
+        {
+            "name": "RDS",
+            "description": "Experience in managing MySQL databases with RDS and handling data migrations."
+        },
+        {
+            "name": "Automation",
+            "description": "Expertise in automating deployment processes using GitHub Actions and AWS tools."
+        }
+    ],
+    "challenges_faced": [],
+    "outcomes": [],
+    "links": []
 }

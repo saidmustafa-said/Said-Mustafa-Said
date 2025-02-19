@@ -1,86 +1,87 @@
 {
-	"project_name": "OCR Read Using LLM for Readability and Understanding",
-	"description": "The project utilized large language models (LLMs) for Optical Character Recognition (OCR) to extract and structure menu data from images. The task also involved addressing Turkish special character encoding issues and ensuring data was output in a structured JSON format.",
-	"year": "2024",
-	"month": "8",
-	"role": "",
-	"project_type": "individual",
-	"technologies_used": [
-		{
-			"name": "Amazon Bedrock",
-			"description": "AWS service for model interaction, used to send images to the Claude 3 Haiku model for text interpretation."
-		},
-		{
-			"name": "Claude 3 Haiku",
-			"description": "Large language model used for understanding and structuring menu data from images."
-		},
-		{
-			"name": "Python",
-			"description": "Programming language used for automating the encoding of images, model interaction, and processing of responses."
-		},
-		{
-			"name": "JSON",
-			"description": "Data format for structuring and saving the menu data."
-		},
-		{
-			"name": "Base64",
-			"description": "Encoding method used for converting images to a format suitable for model input."
-		}
-	],
-	"infrastructure": [],
-	"skills_required": [
-		{
-			"name": "AWS",
-			"description": "Proficiency in Amazon Bedrock and using the Bedrock Runtime for model interaction."
-		},
-		{
-			"name": "OCR",
-			"description": "Familiarity with OCR processes, especially with LLMs for text extraction from images."
-		},
-		{
-			"name": "Large Language Models",
-			"description": "Expertise in working with LLMs like Claude 3 Haiku for text interpretation and processing."
-		},
-		{
-			"name": "Python Programming",
-			"description": "Skilled in Python for automating image encoding, model interaction, and processing responses."
-		},
-		{
-			"name": "Error Handling and Debugging",
-			"description": "Ability to implement error handling for incomplete or erroneous model responses."
-		},
-		{
-			"name": "Unicode Handling",
-			"description": "Experience with character mapping for non-ASCII characters (e.g., Turkish special characters) and custom functions for Unicode correction."
-		},
-		{
-			"name": "JSON Manipulation",
-			"description": "Strong skills in reading and writing JSON files, as well as formatting and manipulating JSON data."
-		}
-	],
-	"challenges_faced": [
-		{
-			"name": "Model Parsing",
-			"description": "Ensuring correct parsing of images into structured data by the models."
-		},
-		{
-			"name": "Unicode Handling",
-			"description": "Handling Turkish special characters by replacing Unicode escape sequences."
-		},
-		{
-			"name": "Error Handling",
-			"description": "Implementing robust error handling for incomplete or faulty responses."
-		}
-	],
-	"outcomes": [
-		{
-			"name": "Structured JSON Output",
-			"description": "Successfully structured menu data in JSON format, including Turkish characters handling."
-		},
-		{
-			"name": "Error Logs",
-			"description": "Created error logs for incomplete model responses and handled the processing of raw data."
-		}
-	],
-	"links": []
+    "id": 15,
+    "project_name": "OCR Read Using LLM for Readability and Understanding",
+    "description": "The project utilized large language models (LLMs) for Optical Character Recognition (OCR) to extract and structure menu data from images. The task also involved addressing Turkish special character encoding issues and ensuring data was output in a structured JSON format.",
+    "year": 2024,
+    "month": 8,
+    "role": "",
+    "project_type": "individual",
+    "technologies_used": [
+        {
+            "name": "Amazon Bedrock",
+            "description": "AWS service for model interaction, used to send images to the Claude 3 Haiku model for text interpretation."
+        },
+        {
+            "name": "Claude 3 Haiku",
+            "description": "Large language model used for understanding and structuring menu data from images."
+        },
+        {
+            "name": "Python",
+            "description": "Programming language used for automating the encoding of images, model interaction, and processing of responses."
+        },
+        {
+            "name": "JSON",
+            "description": "Data format for structuring and saving the menu data."
+        },
+        {
+            "name": "Base64",
+            "description": "Encoding method used for converting images to a format suitable for model input."
+        }
+    ],
+    "infrastructure": [],
+    "skills_required": [
+        {
+            "name": "AWS",
+            "description": "Proficiency in Amazon Bedrock and using the Bedrock Runtime for model interaction."
+        },
+        {
+            "name": "OCR",
+            "description": "Familiarity with OCR processes, especially with LLMs for text extraction from images."
+        },
+        {
+            "name": "Large Language Models",
+            "description": "Expertise in working with LLMs like Claude 3 Haiku for text interpretation and processing."
+        },
+        {
+            "name": "Python Programming",
+            "description": "Skilled in Python for automating image encoding, model interaction, and processing responses."
+        },
+        {
+            "name": "Error Handling and Debugging",
+            "description": "Ability to implement error handling for incomplete or erroneous model responses."
+        },
+        {
+            "name": "Unicode Handling",
+            "description": "Experience with character mapping for non-ASCII characters (e.g., Turkish special characters) and custom functions for Unicode correction."
+        },
+        {
+            "name": "JSON Manipulation",
+            "description": "Strong skills in reading and writing JSON files, as well as formatting and manipulating JSON data."
+        }
+    ],
+    "challenges_faced": [
+        {
+            "name": "Model Parsing",
+            "description": "Ensuring correct parsing of images into structured data by the models."
+        },
+        {
+            "name": "Unicode Handling",
+            "description": "Handling Turkish special characters by replacing Unicode escape sequences."
+        },
+        {
+            "name": "Error Handling",
+            "description": "Implementing robust error handling for incomplete or faulty responses."
+        }
+    ],
+    "outcomes": [
+        {
+            "name": "Structured JSON Output",
+            "description": "Successfully structured menu data in JSON format, including Turkish characters handling."
+        },
+        {
+            "name": "Error Logs",
+            "description": "Created error logs for incomplete model responses and handled the processing of raw data."
+        }
+    ],
+    "links": []
 }
