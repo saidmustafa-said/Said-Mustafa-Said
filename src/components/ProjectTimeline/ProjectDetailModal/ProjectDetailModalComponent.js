@@ -4,12 +4,40 @@
  * @format
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styles from './ProjectDetailModal.module.css';
 
 const ProjectDetailModal = ({ project, onClose }) => {
 	const [markdownContent, setMarkdownContent] = useState('');
+	const modalRef = useRef(null);
+
+	// Prevent background scrolling when modal is open
+	useEffect(() => {
+		if (project) {
+			document.body.classList.add('modal-open'); // Disable background scrolling
+		} else {
+			document.body.classList.remove('modal-open'); // Enable background scrolling
+		}
+
+		return () => {
+			document.body.classList.remove('modal-open'); // Ensure cleanup
+		};
+	}, [project]);
+
+
+	// Prevent scroll propagation from modal to background
+	const preventScrollPropagation = (e) => {
+		if (!modalRef.current) return;
+		const { scrollTop, scrollHeight, clientHeight } = modalRef.current;
+
+		const isAtTop = scrollTop === 0;
+		const isAtBottom = scrollTop + clientHeight === scrollHeight;
+
+		if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+			e.preventDefault(); // Stop background scroll
+		}
+	};
 
 	// Fetch the Markdown content when the modal opens
 	useEffect(() => {
@@ -46,7 +74,10 @@ const ProjectDetailModal = ({ project, onClose }) => {
 			onClick={onClose}>
 			<div
 				className={styles['modal-content']}
-				onClick={(e) => e.stopPropagation()}>
+				onClick={(e) => e.stopPropagation()}
+				ref={modalRef}
+				onWheel={preventScrollPropagation} // Prevents background scroll when at the end
+			>
 				{/* Close Button */}
 				<button
 					className={styles['close-modal']}

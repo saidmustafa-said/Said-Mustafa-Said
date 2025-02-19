@@ -1,6 +1,33 @@
 /* src/components/ProjectTimeline/ProjectDetailModal/ProjectDetailModal.module.css */
 
-/* Modal Overlay & Container */
+/* Modal Content Card */
+/* Hide scrollbar while allowing scrolling */
+.modal-content {
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    /* Prevents it from exceeding the viewport */
+    background: var(--primary-color);
+    padding: var(--spacing-medium);
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(211, 205, 205, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    overflow-y: scroll;
+    /* Enables scrolling */
+    scrollbar-width: none;
+    /* Hides scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Ensure the modal itself is centered properly */
 .project-modal {
     display: flex;
     align-items: center;
@@ -15,20 +42,6 @@
     padding: var(--spacing-medium);
     overflow-y: auto;
     color: var(--text-color);
-}
-
-/* Modal Content Card */
-.modal-content {
-    width: 100%;
-    max-width: 800px;
-    background: var(--primary-color);
-    padding: var(--spacing-medium);
-    border-radius: 1rem;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-medium);
 }
 
 /* Modal Header */
