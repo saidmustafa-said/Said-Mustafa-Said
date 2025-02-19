@@ -43,9 +43,15 @@ const getBasename = () => {
 		return segments.length > 0 ? `/${segments[0]}` : '/';
 	}
 
+	// If hosted on localhost with a specific path `/build`, return `/build`
+	if (hostname === '127.0.0.1' && pathname.includes('/build')) {
+		return '/build';
+	}
+
 	// For custom domains and localhost (`localhost:3000`), use root `/`
 	return '/';
 };
+
 
 const basename = getBasename();
 const router = createBrowserRouter(routes, { basename });
