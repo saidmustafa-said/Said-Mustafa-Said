@@ -2,11 +2,12 @@
 
 import React from 'react';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import Navbar from './components/Navagation/Navbar';
+import Navbar from './components/Navigation/Navbar';
 import Footer from './components/FooterInfo/Footer';
 import Home from './pages/Home';
 import Resume from './pages/Resume';
 import Project from './pages/Project';
+// import NotFound from './pages/NotFound'; // Import 404 page component
 import './index.css';
 
 // Create a layout that includes Navbar and Footer
@@ -20,7 +21,7 @@ const Layout = () => (
 	</>
 );
 
-// Define routes
+// Define routes with a 404 fallback
 const routes = [
 	{
 		path: '/',
@@ -33,28 +34,20 @@ const routes = [
 	},
 ];
 
-/**
- * Dynamically compute the basename:
- * - If the hostname ends with 'github.io', assume the first path segment is the repo name.
- * - Otherwise, return an empty string for custom domains.
- */
 const getBasename = () => {
 	const { hostname, pathname } = window.location;
-	// If on GitHub Pages, use the first path segment
+
+	// If hosted on GitHub Pages (github.io), extract repo name from pathname
 	if (hostname.endsWith('github.io')) {
 		const segments = pathname.split('/').filter(Boolean);
-		return segments.length > 0 ? `/${segments[0]}` : '';
+		return segments.length > 0 ? `/${segments[0]}` : '/';
 	}
-	// For local testing, if your app is served from a subdirectory, return it here.
-	// For example, if you're testing at http://localhost:3000/Said-Mustafa-Said
-	if (pathname.startsWith('/Said-Mustafa-Said')) {
-		return '/Said-Mustafa-Said';
-	}
-	return '';
+
+	// For custom domains and localhost (`localhost:3000`), use root `/`
+	return '/';
 };
 
 const basename = getBasename();
-
 const router = createBrowserRouter(routes, { basename });
 
 const App = () => {
