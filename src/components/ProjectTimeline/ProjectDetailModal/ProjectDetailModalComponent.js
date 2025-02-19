@@ -56,7 +56,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
 
 				{/* Modal Header */}
 				<div className={styles['modal-header']}>
-					<h2>{project.title}</h2>
+					<h2>{project.project_name}</h2>
 				</div>
 
 				{/* Markdown Content */}

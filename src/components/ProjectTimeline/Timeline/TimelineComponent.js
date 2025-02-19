@@ -15,7 +15,7 @@ const Timeline = () => {
 
 	useEffect(() => {
 		// Fetch data from JSON file
-		fetch(`${process.env.PUBLIC_URL}/data/project/timelineData.json`)
+		fetch(`${process.env.PUBLIC_URL}/data/project/timelinetotal.json`)
 			.then((response) => {
 				if (!response.ok) {
 					throw new Error(`HTTP error! Status: ${response.status}`);
@@ -26,12 +26,12 @@ const Timeline = () => {
 			.catch((err) => console.error('Error loading data:', err));
 	}, []);
 
-	// Extract unique years and topics from the project data
+	// Extract unique years and technologies_used from the project data
 	const years = Array.from(
 		new Set(projects.map((project) => project.year))
 	).sort();
 	const skills = Array.from(
-		new Set(projects.flatMap((project) => project.topics))
+		new Set(projects.flatMap((project) => project.technologies_used))
 	);
 
 	// Filtered Projects Logic
@@ -44,7 +44,7 @@ const Timeline = () => {
 
 		const matchesTopic =
 			filters.topic === 'all' ||
-			project.topics.some((topic) => topic === filters.topic);
+			project.technologies_used.some((topic) => topic === filters.topic);
 
 		return matchesYear && matchesMonth && matchesTopic;
 	});
@@ -57,7 +57,7 @@ const Timeline = () => {
 				setFilters={setFilters}
 				projects={projects}
 				availableYears={years} // Pass available years
-				availableSkills={skills} // Pass available skills (topics)
+				availableSkills={skills} // Pass available skills (technologies_used)
 			/>
 			<ProjectGrid projects={filteredProjects} />
 		</div>

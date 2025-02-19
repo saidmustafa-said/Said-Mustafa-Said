@@ -33,12 +33,12 @@ const ProjectGrid = ({ projects }) => {
 								</span>
 							</div>
 
-							<h3>{project.title}</h3>
+							<h3>{project.project_name}</h3>
 							<p>{project.description}</p>
 
-							{/* Topics/Skills section */}
+							{/* technologies_used/Skills section */}
 							<div className={styles.skills}>
-								{project.topics.slice(0, 3).map((topic, index) => (
+								{project.technologies_used.slice(0, 3).map((topic, index) => (
 									<span
 										key={index}
 										className={styles.skill}>
