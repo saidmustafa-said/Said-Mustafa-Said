@@ -128,14 +128,14 @@ const FilterPanel = ({
 
 			{/* Topic Filter */}
 			<div>
-				<h3 className={styles['filter-section-title']}>technologies_used</h3>
+				<h3 className={styles['filter-section-title']}>Technologies</h3>
 				<div className={styles['filter-group']}>
 					<button
 						className={`${styles['filter-tag']} ${
 							filters.topic === 'all' ? styles.active : ''
 						}`}
 						onClick={() => handleFilterChange('topic', 'all')}>
-						All technologies_used
+						All Technologies
 					</button>
 					{topSkills.map((topic) => (
 						<button

@@ -1,88 +1,215 @@
-/* src/components/ProjectTimeline/ProjectDetailModal/ProjectDetailModal.module.css */
-
-/* Modal Content Card */
-/* Hide scrollbar while allowing scrolling */
-.modal-content {
-    width: 100%;
-    max-width: 800px;
+/* ProjectDetailModal.module.css */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 1200px;
     max-height: 90vh;
-    /* Prevents it from exceeding the viewport */
-    background: var(--primary-color);
-    padding: var(--spacing-medium);
-    border-radius: 1rem;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(211, 205, 205, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-medium);
-    overflow-y: scroll;
-    /* Enables scrolling */
-    scrollbar-width: none;
-    /* Hides scrollbar in Firefox */
+    overflow-y: auto;
+    color: var(--text-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--accent-color);
 }
 
-/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
-.modal-content::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* Ensure the modal itself is centered properly */
-.project-modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--primary-color);
+    background: rgba(11, 12, 16, 0.9);
+    backdrop-filter: blur(5px);
     z-index: 1000;
-    padding: var(--spacing-medium);
-    overflow-y: auto;
-    color: var(--text-color);
 }
 
-/* Modal Header */
-.modal-header {
-    text-align: center;
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color);
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton:hover {
+    background: var(--hover-color);
+}
+
+.closeIcon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.header {
+    margin-bottom: var(--spacing-medium);
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.title {
+    color: var(--accent-color);
+    font-size: var(--font-size-megatitle);
+    margin-bottom: 1rem;
+}
+
+.meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pill {
+    background: var(--tertiary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid var(--accent-color);
+}
+
+.section {
+    margin: var(--spacing-medium) 0;
+    padding: 1rem 0;
+}
+
+.sectionTitle {
+    color: var(--accent-color);
+    font-size: var(--font-size-title);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.techGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.techCard {
+    background: var(--tertiary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+    transition: var(--transition);
+}
+
+.techCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(102, 252, 241, 0.2);
+}
+
+.techHeader {
+    margin-bottom: 0.5rem;
+}
+
+.techName {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.techDescription {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.accordion {
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordionItem {
     border-bottom: 1px solid var(--accent-color);
-    padding-bottom: var(--spacing-small);
 }
 
-.modal-header h2 {
-    font-size: 2rem;
-    margin: 0;
+.accordionItem:last-child {
+    border-bottom: none;
 }
 
-/* Markdown Content Area */
-.markdown-content {
-    font-size: var(--font-size-text);
+.accordionHeader {
+    padding: 1rem;
+    background: var(--tertiary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.accordionHeader:hover {
+    background: var(--primary-color);
+}
+
+.accordionContent {
+    padding: 1rem;
+    background: var(--secondary-color);
+    font-size: 0.9rem;
     line-height: 1.6;
 }
 
-/* Optional Markdown Element Styling */
-.markdown-content h3 {
-    font-size: 1.5rem;
-    margin-top: var(--spacing-medium);
-    margin-bottom: var(--spacing-small);
-    border-bottom: 1px solid var(--accent-color);
-    padding-bottom: var(--spacing-small);
+.stepsList {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
 }
 
-.markdown-content p {
-    margin-bottom: var(--spacing-medium);
+.linkList {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-/* Close Button */
-.close-modal {
-    position: absolute;
-    top: var(--spacing-small);
-    right: var(--spacing-small);
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.5rem;
-    cursor: pointer;
+.linkButton {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.linkButton:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: var(--font-size-title);
+    }
+
+    .techGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .accordionHeader {
+        font-size: 0.9rem;
+    }
 }

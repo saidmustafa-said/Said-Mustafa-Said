@@ -26,9 +26,8 @@ const ProjectDetailModal = ({ project, onClose }) => {
 					const response = await fetch(
 						`${process.env.PUBLIC_URL}/data/project/json/${project.id}.json`
 					);
-					if (!response.ok) {
+					if (!response.ok)
 						throw new Error(`HTTP error! Status: ${response.status}`);
-					}
 					const data = await response.json();
 					setProjectData(data);
 				} catch (error) {
@@ -53,121 +52,162 @@ const ProjectDetailModal = ({ project, onClose }) => {
 
 	return (
 		<div
-			className={styles['project-modal']}
+			className={styles.overlay}
 			onClick={onClose}>
 			<div
-				className={styles['modal-content']}
+				className={styles.modal}
 				onClick={(e) => e.stopPropagation()}
 				ref={modalRef}
 				onWheel={preventScrollPropagation}>
 				<button
-					className={styles['close-modal']}
+					className={styles.closeButton}
 					onClick={onClose}>
-					×
+					<span className={styles.closeIcon}>&times;</span>
 				</button>
-				<div className={styles['modal-header']}>
-					<h2>{projectData.project_name}</h2>
-					<p>
-						<strong>Year:</strong> {projectData.year}, <strong>Month:</strong>{' '}
-						{projectData.month}
-					</p>
-					<p>
-						<strong>Role:</strong> {projectData.role} | <strong>Type:</strong>{' '}
-						{projectData.project_type}
-					</p>
+
+				<div className={styles.header}>
+					<h2 className={styles.title}>{projectData.project_name}</h2>
+					<div className={styles.meta}>
+						<span className={styles.pill}>{projectData.year}</span>
+						<span className={styles.pill}>{projectData.month}</span>
+						<span className={styles.pill}>{projectData.role}</span>
+						<span className={styles.pill}>{projectData.project_type}</span>
+					</div>
 				</div>
-				<div className={styles['markdown-content']}>
-					<h3>Description</h3>
-					<p>{projectData.description}</p>
 
+				<div className={styles.content}>
+					<section className={styles.section}>
+						<h3 className={styles.sectionTitle}>Project Overview</h3>
+						<p className={styles.description}>{projectData.description}</p>
+					</section>
+
+					{/* Tech Stack Section */}
 					{projectData.technologies_used.length > 0 && (
-						<>
-							<h3>Technologies Used</h3>
-							<ul>
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>Tech Stack</h3>
+							<div className={styles.techGrid}>
 								{projectData.technologies_used.map((tech, index) => (
-									<li key={index}>
-										<strong>{tech.name}:</strong> {tech.description}
-									</li>
+									<div
+										key={index}
+										className={styles.techCard}>
+										<div className={styles.techHeader}>
+											<span className={styles.techName}>{tech.name}</span>
+										</div>
+										<p className={styles.techDescription}>{tech.description}</p>
+									</div>
 								))}
-							</ul>
-						</>
+							</div>
+						</section>
 					)}
 
+					{/* Infrastructure Section */}
 					{projectData.infrastructure.length > 0 && (
-						<>
-							<h3>Infrastructure</h3>
-							<ul>
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>Infrastructure</h3>
+							<div className={styles.accordion}>
 								{projectData.infrastructure.map((infra, index) => (
-									<li key={index}>
-										<strong>{infra.name}:</strong> {infra.description}
-										{infra.steps && infra.steps.length > 0 && (
-											<ul>
-												{infra.steps.map((step, stepIndex) => (
-													<li key={stepIndex}>{step}</li>
-												))}
-											</ul>
-										)}
-									</li>
+									<details
+										key={index}
+										className={styles.accordionItem}>
+										<summary className={styles.accordionHeader}>
+											{infra.name}
+										</summary>
+										<div className={styles.accordionContent}>
+											<p>{infra.description}</p>
+											{infra.steps?.length > 0 && (
+												<ol className={styles.stepsList}>
+													{infra.steps.map((step, stepIndex) => (
+														<li key={stepIndex}>{step}</li>
+													))}
+												</ol>
+											)}
+										</div>
+									</details>
 								))}
-							</ul>
-						</>
+							</div>
+						</section>
 					)}
 
+					{/* Skills Required Section */}
 					{projectData.skills_required.length > 0 && (
-						<>
-							<h3>Skills Required</h3>
-							<ul>
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>Skills Required</h3>
+							<div className={styles.techGrid}>
 								{projectData.skills_required.map((skill, index) => (
-									<li key={index}>
-										<strong>{skill.name}:</strong> {skill.description}
-									</li>
+									<div
+										key={index}
+										className={styles.techCard}>
+										<div className={styles.techHeader}>
+											<span className={styles.techName}>{skill.name}</span>
+										</div>
+										<p className={styles.techDescription}>
+											{skill.description}
+										</p>
+									</div>
 								))}
-							</ul>
-						</>
+							</div>
+						</section>
 					)}
 
+					{/* Challenges Faced Section */}
 					{projectData.challenges_faced.length > 0 && (
-						<>
-							<h3>Challenges Faced</h3>
-							<ul>
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>Challenges Faced</h3>
+							<div className={styles.techGrid}>
 								{projectData.challenges_faced.map((challenge, index) => (
-									<li key={index}>
-										<strong>{challenge.name}:</strong> {challenge.description}
-									</li>
+									<div
+										key={index}
+										className={styles.techCard}>
+										<div className={styles.techHeader}>
+											<span className={styles.techName}>{challenge.name}</span>
+										</div>
+										<p className={styles.techDescription}>
+											{challenge.description}
+										</p>
+									</div>
 								))}
-							</ul>
-						</>
+							</div>
+						</section>
 					)}
 
+					{/* Outcomes Section */}
 					{projectData.outcomes.length > 0 && (
-						<>
-							<h3>Outcomes</h3>
-							<ul>
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>Outcomes</h3>
+							<div className={styles.techGrid}>
 								{projectData.outcomes.map((outcome, index) => (
-									<li key={index}>
-										<strong>{outcome.name}:</strong> {outcome.description}
-									</li>
+									<div
+										key={index}
+										className={styles.techCard}>
+										<div className={styles.techHeader}>
+											<span className={styles.techName}>{outcome.name}</span>
+										</div>
+										<p className={styles.techDescription}>
+											{outcome.description}
+										</p>
+									</div>
 								))}
-							</ul>
-						</>
+							</div>
+						</section>
 					)}
 
+					{/* Links & Resources Section */}
 					{projectData.links.length > 0 && (
-						<>
-							<h3>Links</h3>
-							<ul>
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>Links & Resources</h3>
+							<div className={styles.linkList}>
 								{projectData.links.map((link, index) => (
-									<li key={index}>
-										<a
-											href={link.url}
-											target='_blank'
-											rel='noopener noreferrer'>
-											{link.name}
-										</a>
-									</li>
+									<a
+										key={index}
+										href={link.url}
+										target='_blank'
+										rel='noopener noreferrer'
+										className={styles.linkButton}>
+										{link.name}
+									</a>
 								))}
-							</ul>
-						</>
+							</div>
+						</section>
 					)}
 				</div>
 			</div>
