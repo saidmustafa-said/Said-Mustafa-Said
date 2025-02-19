@@ -1,67 +1,140 @@
 {
-	"project_name": "Amazon Connect Call Center Integration and AWS Infrastructure",
-	"description": "Designed and implemented a scalable, secure call center system using Amazon Connect, integrating various AWS services like Lambda, DynamoDB, S3, Kinesis Data Firehose, EventBridge, SQS, and QuickSight to enhance customer service and provide real-time data processing and analytics.",
-	"year": "2024",
-	"month": "2",
+	"id": 9,
+	"project_name": "AWS Connect Call Center Integration and AWS Infrastructure",
+	"description": "Designed and implemented a scalable, secure call center system using AWS Connect, integrating various AWS services like AWS Lambda, AWS DynamoDB, AWS S3, AWS Kinesis Data Firehose, AWS EventBridge, AWS Simple Queue Service (SQS), and AWS QuickSight to enhance customer service and provide real-time data processing and analytics.",
+	"year": 2024,
+	"month": 2,
 	"role": "",
 	"project_type": "individual",
 	"technologies_used": [
 		{
-			"name": "Amazon Connect",
+			"name": "AWS Connect",
 			"description": "Implemented custom call flow logic, IVR, and speech-to-text integration."
+		},
+		{
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
 			"name": "AWS Lambda",
 			"description": "Developed API integrations, data processing, and concurrency control functions."
 		},
 		{
-			"name": "Amazon DynamoDB",
+			"name": "AWS DynamoDB",
 			"description": "Used for profile management, locking mechanisms, and real-time session storage."
 		},
 		{
-			"name": "Amazon S3",
+			"name": "AWS S3",
 			"description": "Stored call recordings, survey results, and logs for analysis."
 		},
 		{
-			"name": "Amazon Kinesis Data Firehose",
-			"description": "Enabled real-time data streaming from Amazon Connect to S3."
+			"name": "AWS Kinesis Data Firehose",
+			"description": "Enabled real-time data streaming from AWS Connect to AWS S3."
 		},
 		{
-			"name": "Amazon QuickSight",
+			"name": "AWS QuickSight",
 			"description": "Created real-time dashboards for operational insights and analytics."
 		},
 		{
-			"name": "Amazon EventBridge",
-			"description": "Configured to filter and trigger workflow events from Amazon Connect."
+			"name": "AWS EventBridge",
+			"description": "Configured to filter and trigger workflow events from AWS Connect."
 		},
 		{
-			"name": "Amazon SQS",
+			"name": "AWS SQS",
 			"description": "Managed high-volume event queues for parallel processing."
 		},
 		{
-			"name": "Amazon RDS",
+			"name": "AWS RDS",
 			"description": "Used PostgreSQL for structured relational data storage."
 		}
 	],
 	"infrastructure": [
 		{
-			"name": "AWS Cloud Infrastructure",
-			"description": "Deployed resources within a VPC for security and optimized cloud performance.",
+			"name": "AWS Connect Configuration",
+			"description": "Custom call flow logic, IVR, and speech-to-text integration for AWS Connect.",
 			"steps": [
-				"Configured Amazon Connect with multi-layered call logic.",
-				"Integrated IVR, surveys, and speech-to-text capabilities.",
-				"Set up Lambda functions for data processing and API communication.",
-				"Implemented DynamoDB for real-time data storage and management.",
-				"Established data pipelines with Kinesis, S3, and QuickSight.",
-				"Configured EventBridge and SQS for asynchronous event handling.",
-				"Deployed security measures including IAM roles and VPC peering."
+				"Set up AWS Connect instance: Configure the cloud contact center for handling customer calls.",
+				"Implement IVR: Integrate interactive voice response for routing customer queries.",
+				"Integrate speech-to-text: Enable real-time speech recognition and data capture."
+			]
+		},
+		{
+			"name": "Lambda Functions",
+			"description": "Used AWS Lambda for API integrations and data processing tasks.",
+			"steps": [
+				"Develop Lambda functions: Automate tasks like data validation and API calls.",
+				"Set up event triggers: Configure Lambda to be triggered by AWS Connect events.",
+				"Optimize for concurrency: Ensure Lambda functions efficiently handle multiple tasks simultaneously."
+			]
+		},
+		{
+			"name": "DynamoDB Integration",
+			"description": "Managed customer profiles and session data using AWS DynamoDB.",
+			"steps": [
+				"Provision DynamoDB tables: Create tables for storing session information and customer profiles.",
+				"Implement distributed locking: Use DynamoDB’s conditional writes to handle race conditions.",
+				"Configure data retention: Set TTL for session data to automatically expire after a specified time."
+			]
+		},
+		{
+			"name": "S3 Integration",
+			"description": "Store call recordings, surveys, and logs in Amazon S3 for later analysis.",
+			"steps": [
+				"Set up S3 buckets: Create storage for call recordings and survey results.",
+				"Implement S3 event triggers: Automatically process or analyze data as it's stored.",
+				"Enable versioning: Keep track of changes and updates to recordings and results."
+			]
+		},
+		{
+			"name": "Kinesis Data Firehose Setup",
+			"description": "Stream real-time data from AWS Connect to Amazon S3 using Kinesis Data Firehose.",
+			"steps": [
+				"Set up Kinesis stream: Configure data flow from AWS Connect to S3 via Firehose.",
+				"Enable real-time processing: Stream data to S3 for further processing and analytics.",
+				"Integrate with Lambda: Trigger Lambda functions for processing streamed data."
+			]
+		},
+		{
+			"name": "QuickSight Dashboard",
+			"description": "Create real-time dashboards for operational insights and analytics.",
+			"steps": [
+				"Connect S3 to QuickSight: Set up data sources for real-time visualization.",
+				"Create analytical dashboards: Build dashboards for performance monitoring and insights.",
+				"Share insights: Enable team access to dashboards for decision-making."
+			]
+		},
+		{
+			"name": "EventBridge Setup",
+			"description": "Configure AWS EventBridge for event-driven architecture and workflows.",
+			"steps": [
+				"Set up EventBridge bus: Create an event bus for routing AWS Connect events.",
+				"Filter events: Use rules to filter and trigger specific actions based on event criteria.",
+				"Integrate with Lambda: Trigger Lambda functions in response to specific events."
+			]
+		},
+		{
+			"name": "SQS Integration",
+			"description": "Use AWS SQS to manage event queues for parallel processing.",
+			"steps": [
+				"Provision SQS queues: Set up queues for handling high-volume events.",
+				"Integrate with Lambda: Use SQS to trigger Lambda functions for processing events.",
+				"Implement message delay: Ensure optimal processing times by delaying messages as necessary."
+			]
+		},
+		{
+			"name": "RDS Setup",
+			"description": "Provision AWS RDS for relational data storage using PostgreSQL.",
+			"steps": [
+				"Create PostgreSQL instance: Deploy a relational database for structured data storage.",
+				"Configure backups: Set up automatic backups and scaling for high availability.",
+				"Implement data integrity: Ensure data consistency using foreign keys and other relational database features."
 			]
 		}
 	],
 	"skills_required": [
 		{
 			"name": "AWS Cloud Services",
-			"description": "Expertise in Amazon Connect, Lambda, DynamoDB, S3, Kinesis, QuickSight, EventBridge, and SQS."
+			"description": "Expertise in AWS Connect, AWS Lambda, AWS DynamoDB, AWS S3, AWS Kinesis, AWS QuickSight, AWS EventBridge, and AWS Simple Queue Service (SQS)."
 		},
 		{
 			"name": "API Integrations",
@@ -73,7 +146,7 @@
 		},
 		{
 			"name": "Security",
-			"description": "Implemented secure data transfer, IAM role management, and VPC architecture."
+			"description": "Implemented secure data transfer, AWS Identity and Access Management (IAM) role management, and VPC architecture."
 		}
 	],
 	"challenges_faced": [
@@ -83,11 +156,11 @@
 		},
 		{
 			"name": "Concurrency and Locking",
-			"description": "Implemented a distributed locking system in DynamoDB to prevent race conditions."
+			"description": "Implemented a distributed locking system in AWS DynamoDB to prevent race conditions."
 		},
 		{
 			"name": "Real-Time Processing",
-			"description": "Optimized Lambda functions for efficient execution of concurrent tasks."
+			"description": "Optimized AWS Lambda functions for efficient execution of concurrent tasks."
 		}
 	],
 	"outcomes": [

@@ -1,8 +1,9 @@
 {
+	"id": 8,
 	"project_name": "Terraform and CI/CD for AWS Services with Multi-Environment Setup",
-	"description": "Set up AWS infrastructure using Terraform and implemented a CI/CD pipeline to manage deployments across production and staging environments. The project involved the configuration of various AWS services including CodePipeline, RDS, VPC, ECS, Redis, ALB, Bastion EC2, SES, Route 53, and SSL certificates.",
-	"year": "2024",
-	"month": "1",
+	"description": "Set up AWS infrastructure using Terraform and implemented a CI/CD pipeline to manage deployments across production and staging environments. The project involved the configuration of various AWS services including AWS CodePipeline, AWS RDS, AWS VPC, AWS ECS, Redis, AWS Application Load Balancer (ALB), Bastion EC2, AWS SES, AWS Route 53, and SSL certificates.",
+	"year": 2024,
+	"month": 1,
 	"role": "",
 	"project_type": "individual",
 	"technologies_used": [
@@ -12,71 +13,87 @@
 		},
 		{
 			"name": "AWS Services",
-			"description": "Configured multiple AWS services including CodePipeline, RDS, VPC, ECS, Redis, ALB, Bastion EC2, SES, Route 53, and SSL certificates."
+			"description": "Configured multiple AWS services including AWS CodePipeline, AWS RDS, AWS VPC, AWS ECS, Redis, AWS Application Load Balancer (ALB), Bastion EC2, AWS SES, AWS Route 53, and SSL certificates."
 		},
 		{
 			"name": "CI/CD Pipeline",
-			"description": "Implemented CI/CD pipelines using CodePipeline for automated build and deployment across environments."
+			"description": "Implemented CI/CD pipelines using AWS CodePipeline for automated build and deployment across environments."
 		},
 		{
 			"name": "Multi-Environment Setup",
 			"description": "Configured separate environments for production and staging deployments."
 		},
 		{
-			"name": "ECS",
-			"description": "Managed containerized application deployments on Amazon ECS."
+			"name": "AWS ECS",
+			"description": "Managed containerized application deployments on AWS ECS."
 		},
 		{
-			"name": "RDS",
-			"description": "Used Amazon RDS for database management."
+			"name": "AWS RDS",
+			"description": "Used AWS RDS for database management."
 		},
 		{
-			"name": "Redis",
+			"name": "AWS Redis",
 			"description": "Implemented Redis for caching and session management."
 		},
 		{
-			"name": "SSL Certificates",
+			"name": "AWS SSL Certificates",
 			"description": "Configured SSL certificates for secure HTTPS connections."
 		},
 		{
-			"name": "Route 53",
-			"description": "Used Route 53 for DNS management and domain routing."
+			"name": "AWS Route 53",
+			"description": "Used AWS Route 53 for DNS management and domain routing."
 		}
 	],
 	"infrastructure": [
 		{
 			"name": "AWS CodePipeline",
-			"description": "Set up CodePipeline for continuous integration and deployment.",
+			"description": "Set up AWS CodePipeline for continuous integration and deployment.",
 			"steps": [
-				"Automated the pipeline to pull code, build Docker images, and deploy to ECS."
+				"Automated the pipeline to pull code, build Docker images, and deploy to AWS ECS."
 			]
 		},
 		{
-			"name": "Amazon RDS",
-			"description": "Set up RDS for relational database management and connection handling.",
-			"steps": ["Managed RDS instances for different environments."]
+			"name": "AWS RDS",
+			"description": "Set up AWS RDS for relational database management and connection handling.",
+			"steps": ["Managed AWS RDS instances for different environments."]
 		},
 		{
-			"name": "Amazon VPC",
-			"description": "Set up a VPC for secure networking and resource isolation."
+			"name": "AWS VPC",
+			"description": "Set up an AWS VPC for secure networking and resource isolation.",
+			"steps": [
+				"Provisioned VPC with subnets, route tables, and internet gateways."
+			]
 		},
 		{
-			"name": "Amazon ECS",
-			"description": "Managed ECS for container deployment and orchestration.",
-			"steps": ["Deployed applications using ECS and managed service scaling."]
+			"name": "AWS ECS",
+			"description": "Managed AWS ECS for container deployment and orchestration.",
+			"steps": [
+				"Deployed applications using AWS ECS and managed service scaling."
+			]
 		},
 		{
-			"name": "Redis",
+			"name": "AWS Redis",
 			"description": "Implemented Redis for caching and session management.",
 			"steps": ["Integrated Redis for improved application performance."]
 		},
 		{
-			"name": "Amazon ALB",
-			"description": "Configured ALB for load balancing across ECS services."
+			"name": "AWS Application Load Balancer (ALB)",
+			"description": "Configured AWS ALB for load balancing across AWS ECS services.",
+			"steps": ["Set up ALB for distributing traffic across ECS tasks."]
 		},
 		{
-			"name": "Route 53",
-			"description": "Used Route 53 for DNS routing and domain management."
+			"name": "AWS Route 53",
+			"description": "Used AWS Route 53 for DNS routing and domain management.",
+			"steps": [
+				"Configured DNS records for domain routing and high availability."
+			]
+		},
+		{
+			"name": "SSL Certificates",
+			"description": "Configured SSL certificates for secure HTTPS connections.",
+			"steps": [
+				"Provisioned SSL certificates using AWS Certificate Manager and attached them to ALB."
+			]
 		}
 	],
 	"skills_required": [
@@ -86,11 +103,11 @@
 		},
 		{
 			"name": "AWS Services",
-			"description": "Experience configuring a wide range of AWS services including ECS, RDS, Redis, and Route 53."
+			"description": "Experience configuring a wide range of AWS services including AWS ECS, AWS RDS, Redis, and AWS Route 53."
 		},
 		{
 			"name": "CI/CD Pipeline",
-			"description": "Knowledge of automating the build and deployment process using CodePipeline."
+			"description": "Knowledge of automating the build and deployment process using AWS CodePipeline."
 		},
 		{
 			"name": "Multi-Environment Management",
@@ -98,7 +115,7 @@
 		},
 		{
 			"name": "Routing and Domain Management",
-			"description": "Expertise in managing DNS and domain routing using Route 53."
+			"description": "Expertise in managing DNS and domain routing using AWS Route 53."
 		}
 	],
 	"challenges_faced": [],

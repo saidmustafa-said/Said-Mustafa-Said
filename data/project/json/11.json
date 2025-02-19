@@ -1,14 +1,19 @@
 {
+	"id": 11,
 	"project_name": "AWS Services Architecture Implementation Using Terraform",
-	"description": "Implemented scalable AWS infrastructure using ECS, EC2, ASG with GPU instances, and ALBs for secure and efficient traffic management. Automated deployment with Terraform.",
-	"year": "2024",
-	"month": "4",
+	"description": "Implemented scalable AWS infrastructure using AWS Elastic Container Service (ECS), AWS Elastic Compute Cloud (EC2), Auto Scaling Groups (ASG) with GPU instances, and Application Load Balancers (ALB) for secure and efficient traffic management. Automated deployment with Terraform.",
+	"year": 2024,
+	"month": 4,
 	"role": "",
 	"project_type": "individual",
 	"technologies_used": [
 		{
 			"name": "Terraform",
-			"description": "Used for automating the setup of AWS infrastructure, including ECS services, Auto Scaling, VPC, and ALBs."
+			"description": "Used for automating the setup of AWS infrastructure, including ECS services, Auto Scaling, Virtual Private Cloud (VPC), and Application Load Balancers (ALB)."
+		},
+		{
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
 			"name": "AWS ECS",
@@ -19,14 +24,14 @@
 			"description": "Provisioned EC2 instances with GPU for high-performance computing."
 		},
 		{
-			"name": "AWS ALB",
+			"name": "AWS Application Load Balancer (ALB)",
 			"description": "Used for load balancing between services and ensuring secure HTTPS communication."
 		}
 	],
 	"infrastructure": [
 		{
 			"name": "EC2 Auto Scaling Group with GPU Instances",
-			"description": "Auto scaling group that uses GPU instances to handle traffic surges.",
+			"description": "Auto Scaling Group that uses GPU instances to handle traffic surges.",
 			"steps": [
 				"Configured EC2 Auto Scaling Group with GPU instances.",
 				"Set scaling policies based on traffic load."
@@ -50,16 +55,20 @@
 	],
 	"skills_required": [
 		{
-			"name": "Infrastructure as Code (IaC)",
-			"description": "Proficiency in Terraform to automate AWS infrastructure setup."
+			"name": "Terraform",
+			"description": "Proficiency in using Terraform to automate AWS infrastructure setup."
 		},
 		{
 			"name": "AWS ECS",
 			"description": "Experience in deploying and managing containerized applications using ECS."
 		},
 		{
-			"name": "Auto-Scaling and Load Balancing",
-			"description": "Configuring EC2 Auto Scaling Groups and AWS ALBs for efficient resource management."
+			"name": "EC2 Auto Scaling",
+			"description": "Configuring EC2 Auto Scaling Groups to dynamically scale based on traffic."
+		},
+		{
+			"name": "AWS ALB",
+			"description": "Configuring AWS Application Load Balancers (ALBs) for load balancing and secure traffic management."
 		}
 	],
 	"challenges_faced": [
@@ -69,7 +78,7 @@
 		},
 		{
 			"name": "Ensuring Secure Communication",
-			"description": "Configuring ALBs for HTTPS communication to enforce secure traffic."
+			"description": "Configuring Application Load Balancers (ALBs) for HTTPS communication to enforce secure traffic."
 		}
 	],
 	"outcomes": [
@@ -82,10 +91,5 @@
 			"description": "Automated the entire infrastructure setup using Terraform, reducing manual intervention."
 		}
 	],
-	"links": [
-		{
-			"name": "",
-			"url": ""
-		}
-	]
+	"links": []
 }

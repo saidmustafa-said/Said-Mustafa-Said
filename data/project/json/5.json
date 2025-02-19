@@ -1,14 +1,19 @@
 {
+	"id": 5,
 	"project_name": "Terraform and AI Integration for Stable Diffusion",
 	"description": "Integrating AWS services with Terraform to create a scalable, cost-optimized environment for image generation using Stable Diffusion. The infrastructure supports AI-based image generation with automated scaling and efficient cost management.",
-	"year": "2023",
-	"month": "11",
+	"year": 2023,
+	"month": 11,
 	"role": "",
 	"project_type": "individual",
 	"technologies_used": [
 		{
 			"name": "Terraform",
 			"description": "Used for automating the setup and management of AWS resources."
+		},
+		{
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
 			"name": "AWS Lambda",
@@ -23,11 +28,11 @@
 			"description": "Used for training the Stable Diffusion model with fine-tuning."
 		},
 		{
-			"name": "DynamoDB",
+			"name": "AWS DynamoDB",
 			"description": "Managed NoSQL database for storing metadata related to model operations and user requests."
 		},
 		{
-			"name": "Amazon S3",
+			"name": "AWS S3",
 			"description": "Object storage for managing user-specific image data."
 		},
 		{

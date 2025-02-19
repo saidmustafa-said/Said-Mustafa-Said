@@ -1,8 +1,9 @@
 {
+	"id": 6,
 	"project_name": "Debugging AWS Services Integration",
 	"description": "Debugged an AWS environment involving OpenSearch, RDS, ECS, and other services to resolve deployment issues with GPU-enabled EC2 instances within ECS, enabling successful CI/CD processes.",
-	"year": "2023",
-	"month": "11",
+	"year": 2023,
+	"month": 11,
 	"role": "",
 	"project_type": "individual",
 	"technologies_used": [
@@ -11,27 +12,27 @@
 			"description": "Used for container orchestration and deployment of EC2 instances."
 		},
 		{
-			"name": "Amazon EC2",
+			"name": "AWS EC2",
 			"description": "Used for running both standard and GPU-enabled EC2 instances."
 		},
 		{
-			"name": "Amazon OpenSearch",
+			"name": "AWS OpenSearch",
 			"description": "Search and analytics service for integrating search functionalities."
 		},
 		{
-			"name": "Amazon RDS",
+			"name": "AWS RDS",
 			"description": "Relational database service for data storage and querying."
 		},
 		{
-			"name": "Amazon VPC",
-			"description": "Virtual private cloud for secure networking and resource isolation."
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
 			"name": "Application Load Balancer (ALB)",
 			"description": "Distributes incoming traffic across ECS instances."
 		},
 		{
-			"name": "Amazon S3",
+			"name": "AWS S3",
 			"description": "Object storage for logs and artifacts."
 		},
 		{

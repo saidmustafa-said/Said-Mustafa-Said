@@ -1,8 +1,9 @@
 {
+	"id": 18,
 	"project_name": "Step Functions Workflow Implementation",
 	"description": "A project to automate and manage decision-making processes using AWS Step Functions. It ensures data validation, error handling, and efficient task execution.",
-	"year": "2024",
-	"month": "9",
+	"year": 2024,
+	"month": 9,
 	"role": "",
 	"project_type": "individual",
 	"technologies_used": [
@@ -13,14 +14,6 @@
 		{
 			"name": "AWS Lambda",
 			"description": "Used in conjunction with Step Functions for serverless computation."
-		},
-		{
-			"name": "Error Handling",
-			"description": "Implemented robust error handling and tracking within the workflow."
-		},
-		{
-			"name": "Data Validation",
-			"description": "Ensured data accuracy and completeness during various validation steps."
 		}
 	],
 	"infrastructure": [
@@ -34,24 +27,33 @@
 				"Sample/Serial Status: Manages sample or serial status validation.",
 				"Notifications: Sends alerts for missing data or issues."
 			]
+		},
+		{
+			"name": "Lambda Integration",
+			"description": "Handles serverless computation triggered by events in the workflow.",
+			"steps": [
+				"Invoke Lambda: Triggers Lambda functions when a step completes.",
+				"Process Data: Executes business logic or data processing.",
+				"Return Results: Sends results back to the workflow or other services."
+			]
 		}
 	],
 	"skills_required": [
 		{
 			"name": "Workflow Automation",
-			"description": "Designing and automating workflows using Step Functions."
+			"description": "Designing and automating workflows using AWS Step Functions."
 		},
 		{
-			"name": "AWS Services",
-			"description": "Experience with AWS tools like Lambda and Step Functions."
+			"name": "AWS Lambda Functions",
+			"description": "Building and deploying Lambda functions for serverless computation."
 		},
 		{
-			"name": "Error Handling",
-			"description": "Implementing error tracking and ensuring smooth workflow execution."
+			"name": "Error Handling & Monitoring",
+			"description": "Implementing error handling mechanisms and setting up monitoring using SNS and CloudWatch."
 		},
 		{
-			"name": "Data Validation",
-			"description": "Ensuring data accuracy and completeness at each workflow stage."
+			"name": "Data Validation Techniques",
+			"description": "Ensuring data integrity by validating formats and completeness at each workflow stage."
 		}
 	],
 	"challenges_faced": [
@@ -74,10 +76,5 @@
 			"description": "Enabled parallel task execution for improved workflow efficiency."
 		}
 	],
-	"links": [
-		{
-			"name": "Project Documentation",
-			"url": ""
-		}
-	]
+	"links": []
 }

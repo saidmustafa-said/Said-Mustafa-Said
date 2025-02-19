@@ -1,8 +1,9 @@
 {
+	"id": 16,
 	"project_name": "Migration and Scalability",
 	"description": "The project involved improving scalability by separating an EC2 instance running an application and two databases (Milvus and Supabase), and implementing auto-scaling for the application.",
-	"year": "2023",
-	"month": "8",
+	"year": 2023,
+	"month": 8,
 	"role": "",
 	"project_type": "individual",
 	"technologies_used": [
@@ -11,8 +12,8 @@
 			"description": "Cloud service used to host and scale the application and databases."
 		},
 		{
-			"name": "VPC & Subnets",
-			"description": "Network configuration tools to ensure secure communication between EC2 instances."
+			"name": "AWS VPC & Subnets",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
 			"name": "AWS ALB",
@@ -30,49 +31,77 @@
 	"infrastructure": [
 		{
 			"name": "EC2 Instances",
-			"description": "Used to host both the application and databases in separate instances."
+			"description": "Used to host both the application and databases in separate instances.",
+			"steps": [
+				"Launch EC2 instances for application and database hosting.",
+				"Configure security groups and network settings for instances.",
+				"Set up scaling policies to ensure proper scaling of resources based on demand."
+			]
 		},
 		{
 			"name": "Private Subnets",
-			"description": "Created private subnets to improve security by isolating EC2 instances."
+			"description": "Created private subnets to improve security by isolating EC2 instances.",
+			"steps": [
+				"Create a Virtual Private Cloud (VPC) with public and private subnets.",
+				"Set up routing and security controls for private subnets.",
+				"Configure network access between EC2 instances while maintaining security."
+			]
 		},
 		{
 			"name": "Application Load Balancer",
 			"description": "Used to distribute incoming traffic between different services based on routing configurations.",
 			"steps": [
 				"Set up ALB with target groups for application and database services.",
-				"Configured path-based routing for specific traffic routing."
+				"Configure path-based routing for specific traffic routing."
+			]
+		},
+		{
+			"name": "Docker & Docker Compose",
+			"description": "Used for containerizing the application and databases, allowing easy deployment across instances.",
+			"steps": [
+				"Create Docker images for the application and databases.",
+				"Write Docker Compose configuration for multi-container management.",
+				"Deploy containers on EC2 instances and manage their lifecycle."
+			]
+		},
+		{
+			"name": "Auto-Scaling",
+			"description": "Feature that automatically adjusts the number of EC2 instances for the application based on traffic.",
+			"steps": [
+				"Define auto-scaling policies based on traffic demand.",
+				"Set up CloudWatch alarms for monitoring performance.",
+				"Configure scaling actions to automatically add or remove instances."
 			]
 		}
 	],
 	"skills_required": [
 		{
 			"name": "AWS EC2",
-			"description": "Knowledge of launching, configuring, and managing EC2 instances."
+			"description": "Experience with launching, configuring, and managing EC2 instances for application and database hosting."
 		},
 		{
-			"name": "VPC & Subnets",
-			"description": "Expertise in configuring VPC, subnets (public/private), and routing for network security."
+			"name": "AWS VPC",
+			"description": "Proficiency in configuring VPCs, subnets (public/private), and routing for secure network communications."
 		},
 		{
 			"name": "AWS ALB",
-			"description": "Experience with setting up and configuring Application Load Balancers, as well as target groups for traffic routing."
+			"description": "Experience in setting up and configuring AWS Application Load Balancers, including target groups and traffic routing."
 		},
 		{
 			"name": "Docker & Docker Compose",
-			"description": "Proficiency in containerization and orchestration using Docker Hub and Docker Compose."
+			"description": "Strong skills in containerizing applications and databases using Docker and orchestrating them with Docker Compose."
 		},
 		{
 			"name": "Auto-Scaling",
-			"description": "Familiarity with configuring AWS Auto Scaling for EC2 instances."
+			"description": "Knowledge of configuring auto-scaling for EC2 instances to dynamically manage traffic loads."
 		},
 		{
 			"name": "Database Migration",
-			"description": "Understanding of migrating and managing databases like Milvus and Supabase."
+			"description": "Experience with database migration and management, particularly with Milvus and Supabase."
 		},
 		{
 			"name": "Security Best Practices",
-			"description": "Experience with securing infrastructure by using private subnets and controlling access via ALB."
+			"description": "Understanding of security practices like using private subnets and configuring secure access with AWS ALB."
 		}
 	],
 	"challenges_faced": [
