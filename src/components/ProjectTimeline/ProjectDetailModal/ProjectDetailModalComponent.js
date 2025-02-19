@@ -1,72 +1,55 @@
-/**
- * src/components/ProjectTimeline/ProjectDetailModal/ProjectDetailModal.js
- *
- * @format
- */
+/** @format */
 
 import React, { useState, useEffect, useRef } from 'react';
-import ReactMarkdown from 'react-markdown';
 import styles from './ProjectDetailModal.module.css';
 
 const ProjectDetailModal = ({ project, onClose }) => {
-	const [markdownContent, setMarkdownContent] = useState('');
+	const [projectData, setProjectData] = useState(null);
 	const modalRef = useRef(null);
 
-	// Prevent background scrolling when modal is open
 	useEffect(() => {
 		if (project) {
-			document.body.classList.add('modal-open'); // Disable background scrolling
+			document.body.classList.add('modal-open');
 		} else {
-			document.body.classList.remove('modal-open'); // Enable background scrolling
+			document.body.classList.remove('modal-open');
 		}
-
 		return () => {
-			document.body.classList.remove('modal-open'); // Ensure cleanup
+			document.body.classList.remove('modal-open');
 		};
 	}, [project]);
 
-
-	// Prevent scroll propagation from modal to background
-	const preventScrollPropagation = (e) => {
-		if (!modalRef.current) return;
-		const { scrollTop, scrollHeight, clientHeight } = modalRef.current;
-
-		const isAtTop = scrollTop === 0;
-		const isAtBottom = scrollTop + clientHeight === scrollHeight;
-
-		if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
-			e.preventDefault(); // Stop background scroll
-		}
-	};
-
-	// Fetch the Markdown content when the modal opens
 	useEffect(() => {
-		setMarkdownContent('');
-
+		setProjectData(null);
 		if (project) {
-			const fetchMarkdown = async () => {
+			const fetchProjectData = async () => {
 				try {
 					const response = await fetch(
-						`${process.env.PUBLIC_URL}/data/project/markdown/${project.id}.md`
+						`${process.env.PUBLIC_URL}/data/project/json/${project.id}.json`
 					);
-
 					if (!response.ok) {
 						throw new Error(`HTTP error! Status: ${response.status}`);
 					}
-
-					const data = await response.text();
-					setMarkdownContent(data);
+					const data = await response.json();
+					setProjectData(data);
 				} catch (error) {
-					console.error('Error fetching Markdown content:', error);
-					setMarkdownContent('# Error\nFailed to load project details.');
+					console.error('Error fetching project data:', error);
 				}
 			};
-
-			fetchMarkdown();
+			fetchProjectData();
 		}
 	}, [project]);
 
-	if (!project) return null;
+	const preventScrollPropagation = (e) => {
+		if (!modalRef.current) return;
+		const { scrollTop, scrollHeight, clientHeight } = modalRef.current;
+		const isAtTop = scrollTop === 0;
+		const isAtBottom = scrollTop + clientHeight === scrollHeight;
+		if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+			e.preventDefault();
+		}
+	};
+
+	if (!project || !projectData) return null;
 
 	return (
 		<div
@@ -76,23 +59,116 @@ const ProjectDetailModal = ({ project, onClose }) => {
 				className={styles['modal-content']}
 				onClick={(e) => e.stopPropagation()}
 				ref={modalRef}
-				onWheel={preventScrollPropagation} // Prevents background scroll when at the end
-			>
-				{/* Close Button */}
+				onWheel={preventScrollPropagation}>
 				<button
 					className={styles['close-modal']}
 					onClick={onClose}>
 					×
 				</button>
-
-				{/* Modal Header */}
 				<div className={styles['modal-header']}>
-					<h2>{project.project_name}</h2>
+					<h2>{projectData.project_name}</h2>
+					<p>
+						<strong>Year:</strong> {projectData.year}, <strong>Month:</strong>{' '}
+						{projectData.month}
+					</p>
+					<p>
+						<strong>Role:</strong> {projectData.role} | <strong>Type:</strong>{' '}
+						{projectData.project_type}
+					</p>
 				</div>
-
-				{/* Markdown Content */}
 				<div className={styles['markdown-content']}>
-					<ReactMarkdown>{markdownContent}</ReactMarkdown>
+					<h3>Description</h3>
+					<p>{projectData.description}</p>
+
+					{projectData.technologies_used.length > 0 && (
+						<>
+							<h3>Technologies Used</h3>
+							<ul>
+								{projectData.technologies_used.map((tech, index) => (
+									<li key={index}>
+										<strong>{tech.name}:</strong> {tech.description}
+									</li>
+								))}
+							</ul>
+						</>
+					)}
+
+					{projectData.infrastructure.length > 0 && (
+						<>
+							<h3>Infrastructure</h3>
+							<ul>
+								{projectData.infrastructure.map((infra, index) => (
+									<li key={index}>
+										<strong>{infra.name}:</strong> {infra.description}
+										{infra.steps && infra.steps.length > 0 && (
+											<ul>
+												{infra.steps.map((step, stepIndex) => (
+													<li key={stepIndex}>{step}</li>
+												))}
+											</ul>
+										)}
+									</li>
+								))}
+							</ul>
+						</>
+					)}
+
+					{projectData.skills_required.length > 0 && (
+						<>
+							<h3>Skills Required</h3>
+							<ul>
+								{projectData.skills_required.map((skill, index) => (
+									<li key={index}>
+										<strong>{skill.name}:</strong> {skill.description}
+									</li>
+								))}
+							</ul>
+						</>
+					)}
+
+					{projectData.challenges_faced.length > 0 && (
+						<>
+							<h3>Challenges Faced</h3>
+							<ul>
+								{projectData.challenges_faced.map((challenge, index) => (
+									<li key={index}>
+										<strong>{challenge.name}:</strong> {challenge.description}
+									</li>
+								))}
+							</ul>
+						</>
+					)}
+
+					{projectData.outcomes.length > 0 && (
+						<>
+							<h3>Outcomes</h3>
+							<ul>
+								{projectData.outcomes.map((outcome, index) => (
+									<li key={index}>
+										<strong>{outcome.name}:</strong> {outcome.description}
+									</li>
+								))}
+							</ul>
+						</>
+					)}
+
+					{projectData.links.length > 0 && (
+						<>
+							<h3>Links</h3>
+							<ul>
+								{projectData.links.map((link, index) => (
+									<li key={index}>
+										<a
+											href={link.url}
+											target='_blank'
+											rel='noopener noreferrer'>
+											{link.name}
+										</a>
+									</li>
+								))}
+							</ul>
+						</>
+					)}
 				</div>
 			</div>
 		</div>
