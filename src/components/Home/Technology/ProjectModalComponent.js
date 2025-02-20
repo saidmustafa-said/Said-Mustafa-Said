@@ -1,53 +1,94 @@
-/**
- * src/components/home/Technology/ProjectModalComponent.js
- *
- * @format
- */
+/** @format */
 
 import React from 'react';
 import styles from './ProjectModal.module.css';
 import { FaLaptopCode, FaRegListAlt } from 'react-icons/fa';
 
 const ProjectModal = ({ project, onClose }) => {
+	if (!project) return null;
+
 	return (
-		<div className={styles['project-modal']}>
-			<div className={styles['modal-content']}>
+		<div
+			className={styles.overlay}
+			onClick={onClose}>
+			<div
+				className={styles.modal}
+				onClick={(e) => e.stopPropagation()}>
 				<button
-					className={styles['close-modal']}
+					className={styles.closeButton}
 					onClick={onClose}>
-					&times;
+					<span className={styles.closeIcon}>&times;</span>
 				</button>
-				<div className={styles.modalInnerContent}>
-					<header className={styles.modalHeader}>
-						<h2>{project.title}</h2>
-						<p className={styles.modalDescription}>{project.description}</p>
-					</header>
-					<div className={styles.modalBody}>
-						<div className={styles.modalSection}>
-							<h3>
-								<FaLaptopCode className={styles.modalIcon} /> Technologies
+
+				<div className={styles.header}>
+					<h2 className={styles.title}>{project.title}</h2>
+					<p className={styles.description}>{project.description}</p>
+				</div>
+
+				<div className={styles.content}>
+					{/* Technologies Section */}
+					{project.technologies && project.technologies.length > 0 && (
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>
+								<FaLaptopCode className={styles.icon} /> Technologies
 							</h3>
-							<div className={styles['list-card']}>
-								<ul>
-									{project.technologies.map((tech, index) => (
-										<li key={index}>{tech}</li>
-									))}
-								</ul>
+							<div className={styles.techGrid}>
+								{project.technologies.map((tech, index) => (
+									<div
+										key={index}
+										className={styles.techCard}>
+										<span className={styles.techName}>{tech}</span>
+									</div>
+								))}
 							</div>
-						</div>
-						<div className={styles.modalSection}>
-							<h3>
-								<FaRegListAlt className={styles.modalIcon} /> Features
+						</section>
+					)}
+
+					{/* Features Section */}
+					{project.features && project.features.length > 0 && (
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>
+								<FaRegListAlt className={styles.icon} /> Features
 							</h3>
-							<div className={styles['list-card']}>
-								<ul>
-									{project.features.map((feature, index) => (
-										<li key={index}>{feature}</li>
-									))}
-								</ul>
+							<div className={styles.techGrid}>
+								{project.features.map((feature, index) => (
+									<div
+										key={index}
+										className={styles.techCard}>
+										<span className={styles.techName}>{feature}</span>
+									</div>
+								))}
 							</div>
-						</div>
-					</div>
+						</section>
+					)}
+
+					{/* Links & Resources Section */}
+					{project.github_links && project.github_links.length > 0 && (
+						<section className={styles.section}>
+							<h3 className={styles.sectionTitle}>Links & Resources</h3>
+							<div className={styles.accordion}>
+								{project.github_links.map((link, index) => (
+									<details
+										key={index}
+										className={styles.accordionItem}>
+										<summary className={styles.accordionHeader}>
+											{link.name}
+										</summary>
+										<div className={styles.accordionContent}>
+											<p>{link.description}</p>
+											<a
+												href={link.url}
+												target='_blank'
+												rel='noopener noreferrer'
+												className={styles.linkButton}>
+												Visit Link
+											</a>
+										</div>
+									</details>
+								))}
+							</div>
+						</section>
+					)}
 				</div>
 			</div>
 		</div>

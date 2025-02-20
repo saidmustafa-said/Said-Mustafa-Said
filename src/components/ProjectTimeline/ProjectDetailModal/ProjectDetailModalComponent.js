@@ -192,19 +192,29 @@ const ProjectDetailModal = ({ project, onClose }) => {
 					)}
 
 					{/* Links & Resources Section */}
+					{/* Links & Resources Section */}
 					{projectData.links.length > 0 && (
 						<section className={styles.section}>
 							<h3 className={styles.sectionTitle}>Links & Resources</h3>
-							<div className={styles.linkList}>
+							<div className={styles.accordion}>
 								{projectData.links.map((link, index) => (
-									<a
+									<details
 										key={index}
-										href={link.url}
-										target='_blank'
-										rel='noopener noreferrer'
-										className={styles.linkButton}>
-										{link.name}
-									</a>
+										className={styles.accordionItem}>
+										<summary className={styles.accordionHeader}>
+											{link.name}
+										</summary>
+										<div className={styles.accordionContent}>
+											<p>{link.description}</p>
+											<a
+												href={link.url}
+												target='_blank'
+												rel='noopener noreferrer'
+												className={styles.linkButton}>
+												Visit Link
+											</a>
+										</div>
+									</details>
 								))}
 							</div>
 						</section>
