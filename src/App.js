@@ -52,7 +52,6 @@ const getBasename = () => {
 	return '/';
 };
 
-
 const basename = getBasename();
 const router = createBrowserRouter(routes, { basename });
 
