@@ -3,17 +3,17 @@
 	"name": "Said Mustafa Said",
 	"icons": [
 		{
-			"src": "profile.png",
+			"src": "/photos/img/64x63_favicon.png",
 			"sizes": "64x64 32x32 24x24 16x16",
 			"type": "image/x-icon"
 		},
 		{
-			"src": "profile.png",
+			"src": "/photos/img/192x192_favicon.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "profile.png",
+			"src": "/photos/img/512x512_favicon.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		}
