@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/removing_slow
 
 # testing
 /coverage

@@ -19,7 +19,7 @@
 					"url": "https://github.com/yourusername/deep-learning-optimizer"
 				}
 			],
-			"image": "/photos/home/ai_ml.webp",
+			"image": "/photos/tech_img/ai_ml.webp",
 			"alt": "AI and machine learning model development"
 		},
 		{
@@ -41,7 +41,7 @@
 					"url": "https://github.com/yourusername/nlp-pipeline"
 				}
 			],
-			"image": "/photos/home/llms_nlp_3.webp",
+			"image": "/photos/tech_img/llms_nlp_3.webp",
 			"alt": "Large language models and NLP solutions"
 		},
 		{
@@ -63,7 +63,7 @@
 					"url": "https://github.com/yourusername/k8s-automation"
 				}
 			],
-			"image": "/photos/home/devops_2.webp",
+			"image": "/photos/tech_img/devops_2.webp",
 			"alt": "DevOps and cloud infrastructure solutions"
 		},
 		{
@@ -85,7 +85,7 @@
 					"url": "https://github.com/yourusername/automation-scripts"
 				}
 			],
-			"image": "/photos/home/programming.webp",
+			"image": "/photos/tech_img/programming.webp",
 			"alt": "Backend programming and software development"
 		}
 	]
